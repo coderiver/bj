@@ -1,1 +1,630 @@
-// Normally mainpage styles
+.out
+	min-width: 320px
+
+.top
+	background: #d1d1d1
+	text-align: center
+	font-size: 0
+	padding: 15px 
+	+r1
+		display: none
+	&__banner
+		display: inline-block
+		max-width: 100%
+		img
+			max-width: 100%
+.header
+	font-size: 0
+	min-height: 74px 
+	&__wrap
+		padding: 15px 15px 14px 
+		+transition(all 0.3s)
+		position: relative
+		background: #000 
+		z-index: 1000 
+		&:before
+			position: absolute
+			top: 0
+			left: 0
+			right: 0
+			background: #fff
+			+transition(all 0.3s)
+			height: 0
+			content: ""  
+		&.is-active
+			position: fixed
+			top: 0
+			left: 0
+			right: 0
+			&:before
+				height: 100%
+			.header__social
+				a
+					&:after
+						visibility: visible
+						+opacity(1)
+			.btn-search
+				&:after
+					visibility: visible
+					+opacity(1)
+			.btn-nav
+				&:before, &:after, span
+					background: #000
+			.logo
+				img
+					&.is-black
+						visibility: visible
+						+opacity(1)
+					&.is-white
+						visibility: hidden
+						+opacity(0)
+			.nav
+				+r1
+					background: #fff 
+				a
+					color: #000 
+	&__inner
+		max-width: 940px
+		margin: 0 auto
+		+clr
+		position: relative
+		z-index: 5 
+	&__left
+		float: left
+	&__right
+		float: right
+		padding: 10px 0 
+	&__social
+		padding: 1px 0 0 
+		display: inline-block
+		vertical-align: top
+		li
+			display: inline-block
+			vertical-align: middle
+			padding: 0 0 0 20px 
+			+r2
+				padding: 0 0 0 10px 
+		a
+			display: inline-block
+			position: relative
+			&:after
+				position: absolute
+				top: 0
+				left: 0
+				content: "" 
+				visibility: hidden
+				+opacity(0)
+				+transition(all 0.3s)
+			&.is-fb
+				+s(fb-white)
+				&:after
+					+s(fb-black)
+			&.is-tw
+				+s(tw-white)
+				&:after
+					+s(tw-black)
+			&.is-instagram
+				+s(instagram-white)
+				&:after
+					+s(instagram-black)
+			&.is-mail
+				+s(mail-white)
+				&:after
+					+s(mail-black)
+	.btn-search
+		+s(search-white)
+		position: relative
+		display: inline-block
+		vertical-align: top
+		margin: 0 20px 0 0 
+		+r2
+			margin: 0 10px 0 0 
+		&:after
+			position: absolute
+			top: 0
+			left: 0
+			+s(search-black)
+			content: ""
+			visibility: hidden
+			+opacity(0)
+			+transition(all 0.3s)
+			
+.logo
+	display: inline-block
+	vertical-align: top
+	width: 68px
+	position: relative
+	img
+		width: 100%
+		+transition(opacity 0.3s, visibility 0.3s)
+		&.is-black
+			visibility: hidden
+			+opacity(0)
+			position: absolute
+			top: 0
+			left: 0
+		&.is-white
+			visibility: visible
+			+opacity(1)
+
+.btn-nav
+	width: 24px
+	height: 18px
+	background: none
+	display: inline-block
+	vertical-align: top
+	position: relative
+	margin: 13px 30px 0 0 
+	+r2
+		margin: 13px 20px 0 0 
+	&:before, &:after, span
+		content: ""
+		position: absolute
+		left: 0
+		right: 0
+		background: #fff
+		height: 4px
+		+border-radius(2px) 
+		+transition(background 0.3s)
+	&:before
+		top: 0
+	&:after
+		bottom: 0
+	span
+		top: 7px
+
+.nav
+	display: block
+	overflow: hidden
+	text-align: center
+	+r1
+		position: absolute
+		top: 100%
+		left: 0
+		text-align: left
+		margin: 11px 0 0 -15px 
+		background: #000
+		visibility: hidden
+		+opacity(0)
+		+transition(all 0.3s)
+	&.is-active
+		visibility: visible
+		+opacity(1)
+	ul
+		position: relative
+	li
+		display: inline-block
+		vertical-align: top
+		padding: 11px 14px 
+		+r1
+			display: block
+	a
+		+bold
+		font-size: 20px
+		color: #fff
+		+transition(all 0.3s)
+		text-transform: uppercase
+		line-height: 1
+		&:hover
+			text-decoration: underline
+
+.banner
+	&__inner
+		display: block
+		height: 600px 
+		+vertical
+		position: relative
+		+cover
+		&:hover
+			.banner__info
+				+opacity(1)
+				visibility: visible
+			&:after
+				+opacity(0.8)
+		&:after
+			content: "" 
+			position: absolute
+			top: 0
+			bottom: 0
+			left: 0
+			right: 0
+			background: #000
+			+opacity(0.4) 
+			+transition(opacity 0.3s)
+	.title-h2, p
+		color: #000
+	p
+		max-width: 720px
+		margin: 0 auto
+		padding: 6px 0 0 
+		font-size: 22px
+	&__cover
+		display: inline-block
+		vertical-align: middle
+		width: 100%
+		max-width: 940px
+		position: relative
+		z-index: 5 
+		background: rgba(255, 255, 255, 0.8) 
+		padding: 27px 15px 19px 
+		+box
+	&__sticker
+		position: absolute
+		top: -10px
+		left: 0
+		right: 0
+	&__info
+		position: absolute
+		bottom: 30px
+		left: 0
+		right: 0
+		text-align: center
+		z-index: 5 
+		+opacity(0)
+		visibility: hidden
+		+transition(all 0.3s)
+		li
+			display: inline-block
+			vertical-align: top
+			margin: 0 9px 
+			padding: 0 0 0 30px
+			position: relative
+			+reg
+			font-size: 14px
+			color: #fff
+			+opacity(0.5)
+			&:before
+				position: absolute
+				left: 0
+				top: 50%
+				content: "" 
+			&.is-view
+				&:before
+					margin-top: -5px
+					+s(view-white)
+			&.is-comment
+				&:before
+					margin-top: -7px
+					+s(comment-white)
+.sticker
+	text-transform: uppercase
+	+bold
+	font-size: 12px
+	color: #fff
+	background: #000
+	line-height: 1
+	padding: 5px 6px 3px
+	display: inline-block   
+	
+//items
+.content
+	max-width: 940px
+	margin: 0 auto
+	padding: 10px 15px 
+	+r1
+		max-width: 620px
+	+r2
+		max-width: 300px
+.row
+	margin: 0 -10px 
+	+clr
+	font-size: 0
+.items
+	&-66
+		width: 66.6%
+		+r1
+			width: 100%
+		&.is-left
+			float: left
+		&.is-right
+			float: right
+	&-33
+		width: 33.4%
+		+r1
+			width: 100%
+		&.is-left
+			float: left
+		&.is-right
+			float: right
+
+.item
+	+box
+	padding: 10px 
+	display: inline-block
+	vertical-align: top
+	width: 100%
+	&.is-big
+		width: 100%
+		.item__inner
+			&.is-img
+				&:before
+					+opacity(0.3)				
+				&:hover
+					&:before
+						+opacity(0.8)
+		p
+			font-size: 22px
+			text-shadow: 0 1px 0 rgba(0, 1, 1, 0.5)
+			height: 78px
+	&.is-small
+		width: 50%
+		+r2
+			width: 100%
+	img
+		max-width: 100%
+		display: inline-block
+		vertical-align: top
+	&__inner
+		display: block
+		padding: 20px 19px 30px  
+		+cover
+		position: relative
+		min-height: 400px
+		+box 
+		&:hover
+			.item__info
+				+opacity(1)
+				visibility: visible
+		&.is-img
+			&:before
+				position: absolute
+				top: 0
+				bottom: 0
+				right: 0
+				left: 0
+				background: #000
+				+opacity(0.4)
+				content: "" 
+				+transition(opacity 0.3s)
+			&:hover
+				&:before
+					+opacity(0.8)
+		&.is-border
+			&:before
+				position: absolute
+				top: 0
+				bottom: 0
+				right: 0
+				left: 0
+				border: 1px solid #000
+				content: "" 
+		.title-h3, .title-h4, p
+			color: #fff 
+		.title-h3
+			text-shadow: 0 1px 0 rgba(0, 1, 1, 0.5)
+			margin-bottom: 23px
+			height: 66px
+			overflow: hidden
+		.title-h4
+			margin-bottom: 9px
+			overflow: hidden
+			height: 78px
+		p
+			max-width: 500px
+			height: 84px
+			overflow: hidden
+	&__ppl
+		text-align: center
+		margin: 0 -5px 
+		.title-h3, .title-h4, p
+			color: #000 
+	&__text
+		position: absolute
+		bottom: 33px
+		left: 19px
+		right: 19px
+		z-index: 5
+	.sticker
+		position: absolute
+		top: 0
+		left: 0
+		z-index: 5 
+	&__img
+		+border-radius(50%)
+		display: inline-block
+		margin-bottom: 16px
+	&__fb
+		margin: 20px 0 0 
+		+r1
+			float: right
+			margin: 0
+		+r2
+			margin: 20px 0 0 
+	&_banner
+		width: 100%
+		font-size: 0
+		a
+			+clr
+			display: block
+			overflow: hidden
+		img
+			+r1
+				width: 48%
+			+r2
+				width: 100%
+	&__banner
+		background: #d1d1d1
+		text-align: center
+		display: block 
+	&__photo
+		margin: -20px -19px 0
+		img
+			margin-bottom: 16px
+			height: 180px 
+		.title-h4, p
+			color: #000  
+	&__avatar
+		border: 2px solid #D1D1D1
+		+border-radius(50%)
+		background-color: #58595C
+		width: 60px
+		height: 60px
+		overflow: hidden
+		margin-bottom: 16px
+		img
+			width: 100%
+	&__info
+		position: absolute
+		top: 6px
+		right: 10px
+		z-index: 5 
+		+opacity(0)
+		visibility: hidden
+		+transition(all 0.3s)
+		li
+			display: inline-block
+			vertical-align: top
+			margin: 0 9px 
+			padding: 0 0 0 30px
+			position: relative
+			+reg
+			font-size: 14px
+			color: #fff
+			+opacity(1)
+			&:before
+				position: absolute
+				left: 0
+				top: 50%
+				content: "" 
+			&.is-view
+				&:before
+					margin-top: -5px
+					+s(view-white)
+			&.is-comment
+				&:before
+					margin-top: -7px
+					+s(comment-white)
+//longread
+.longread
+	padding: 10px 0 
+	&__inner
+		display: block		
+		position: relative
+		+cover
+		padding: 110px 70px 100px 
+		text-align: center
+		+r1
+			padding: 70px 0 
+		&:hover
+			.longread__info
+				+opacity(1)
+				visibility: visible
+			&:after
+				+opacity(0.8)
+		&:after
+			content: "" 
+			position: absolute
+			top: 0
+			bottom: 0
+			left: 0
+			right: 0
+			background: #000
+			+opacity(0.3) 
+			+transition(opacity 0.3s) 
+	.title-h2, p
+		color: #000
+	p
+		max-width: 720px
+		margin: 0 auto
+		padding: 6px 0 0 
+		font-size: 22px
+	&__cover
+		display: inline-block
+		vertical-align: middle
+		width: 100%
+		max-width: 940px
+		position: relative
+		z-index: 5 
+		background: rgba(255, 255, 255, 0.8) 
+		padding: 27px 15px 19px 
+		+box
+	&__sticker
+		position: absolute
+		top: -10px
+		left: 0
+		right: 0	
+	&__info
+		position: absolute
+		bottom: 30px
+		left: 0
+		right: 0
+		z-index: 5 
+		+opacity(0)
+		visibility: hidden
+		+transition(all 0.3s)
+		text-align: center
+		li
+			display: inline-block
+			vertical-align: top
+			margin: 0 9px 
+			padding: 0 0 0 30px
+			position: relative
+			+reg
+			font-size: 14px
+			color: #fff
+			+opacity(0.5)
+			&:before
+				position: absolute
+				left: 0
+				top: 50%
+				content: "" 
+			&.is-view
+				&:before
+					margin-top: -5px
+					+s(view-white)
+			&.is-comment
+				&:before
+					margin-top: -7px
+					+s(comment-white)
+//informer
+.informer
+	padding: 10px 15px 
+	&__inner
+		border: 3px solid #D1D1D1
+		padding: 12px 20px
+		max-width: 940px
+		margin: 0 auto 
+		+box
+		display: block
+	p
+		+bold
+		font-size: 24px
+		color: #000 
+		span
+			color: #0080EC
+			span
+				font-size: 32px
+			&.is-border
+				border-bottom: 1px dashed #0080EC
+				
+//menu
+.menu
+	padding: 0 15px
+	+r1
+		display: none
+	&__inner
+		max-width: 940px
+		margin: 0 auto
+		+clr
+		font-size: 0
+	&__list
+		li
+			display: inline-block
+			vertical-align: top
+			padding: 0 14px 0 0
+		a
+			font-size: 11px
+			padding: 6px 0 4px
+			display: inline-block 
+			color: #000
+			+reg 
+			text-transform: uppercase
+			&.is-active, &:hover
+				color: #900022 
+.p-logo
+	float: left
+	width: 100px
+	margin-right: 25px
+	padding: 6px 0 4px 
+	img
+		width: 100%

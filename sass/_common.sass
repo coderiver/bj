@@ -47,6 +47,13 @@
 // p
 // 	+jpg(bla)
 
+//breakpoints
+=r1
+	@media only screen and (max-width: "1024px")
+		@content
+=r2
+	@media only screen and (max-width: "660px")
+		@content
 
 body
 	font-family: Arial, sans-serif 
@@ -54,113 +61,46 @@ body
 	line-height: 1.4
 
 
-// common blocks      
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// fonts
+
++font("ProximaNova Regular", ProximaNova-Regular)
++font("ProximaNova Semibold", proxima_nova-semibold)
++font("ProximaNova Bold", ProximaNova-Bold)
+
+=reg
+	font-family: "ProximaNova Regular", Arial, sans-serif
+=semi
+	font-family: "ProximaNova Semibold", Arial, sans-serif
+=bold
+	font-family: "ProximaNova Bold", Arial, sans-serif
+	
+//reset
+a
+	text-decoration: none
+
+h1, h2, h3, h4, h5, h6, strong, b
+	font-weight: normal
+i
+	font-style: normal
+
+.title-h2
+	+bold
+	font-size: 36px
+	line-height: 1.2
+	+r1
+		font-size: 28px
+
+.title-h3
+	+bold
+	font-size: 28px
+	line-height: 1.2
+	
+.title-h4
+	+bold
+	font-size: 22px
+	line-height: 1.2
+
+p
+	+reg
+	font-size: 18px
+	line-height: 1.2 
