@@ -53,9 +53,8 @@ p { font-family: "ProximaNova Regular", Arial, sans-serif; font-size: 18px; line
 .top__banner img { max-width: 100%; }
 
 .header { font-size: 0; min-height: 74px; }
-.header__wrap { padding: 15px 15px 14px; -moz-transition: all 0.3s; -o-transition: all 0.3s; -webkit-transition: all 0.3s; transition: all 0.3s; position: relative; background: black; z-index: 1000; }
-.header__wrap:before { position: absolute; top: 0; left: 0; right: 0; background: white; -moz-transition: all 0.3s; -o-transition: all 0.3s; -webkit-transition: all 0.3s; transition: all 0.3s; height: 0; content: ""; }
-.header__wrap.is-active { position: fixed; top: 0; left: 0; right: 0; }
+.header__wrap { -moz-transition: all 0.3s; -o-transition: all 0.3s; -webkit-transition: all 0.3s; transition: all 0.3s; position: relative; background: black; z-index: 1000; }
+.header__wrap.is-active { position: fixed; top: 0; left: 0; right: 0; background: white; }
 .header__wrap.is-active:before { height: 100%; }
 .header__wrap.is-active .header__social a:after { visibility: visible; filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false); opacity: 1; }
 .header__wrap.is-active .btn-search:after { visibility: visible; filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false); opacity: 1; }
@@ -64,7 +63,7 @@ p { font-family: "ProximaNova Regular", Arial, sans-serif; font-size: 18px; line
 .header__wrap.is-active .logo img.is-white { visibility: hidden; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0); opacity: 0; }
 @media only screen and (max-width: 1024px) { .header__wrap.is-active .nav { background: white; } }
 .header__wrap.is-active .nav a { color: black; }
-.header__inner { max-width: 940px; margin: 0 auto; *zoom: 1; position: relative; z-index: 5; }
+.header__inner { max-width: 940px; margin: 0 auto; *zoom: 1; position: relative; z-index: 5; padding: 15px 15px 14px; }
 .header__inner:after { content: " "; display: table; clear: both; }
 .header__left { float: left; }
 .header__right { float: right; padding: 10px 0; }
@@ -144,6 +143,7 @@ p { font-family: "ProximaNova Regular", Arial, sans-serif; font-size: 18px; line
 .item.is-big .item__inner.is-img:before { filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=30); opacity: 0.3; }
 .item.is-big .item__inner.is-img:hover:before { filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80); opacity: 0.8; }
 .item.is-big p { font-size: 22px; text-shadow: 0 1px 0 rgba(0, 1, 1, 0.5); height: 78px; }
+@media only screen and (max-width: 660px) { .item.is-big p { max-width: 500px; height: 84px; overflow: hidden; font-size: 18px; } }
 .item.is-small { width: 50%; }
 @media only screen and (max-width: 660px) { .item.is-small { width: 100%; } }
 .item img { max-width: 100%; display: inline-block; vertical-align: top; }
@@ -154,6 +154,7 @@ p { font-family: "ProximaNova Regular", Arial, sans-serif; font-size: 18px; line
 .item__inner.is-border:before { position: absolute; top: 0; bottom: 0; right: 0; left: 0; border: 1px solid black; content: ""; }
 .item__inner .title-h3, .item__inner .title-h4, .item__inner p { color: white; }
 .item__inner .title-h3 { text-shadow: 0 1px 0 rgba(0, 1, 1, 0.5); margin-bottom: 23px; height: 66px; overflow: hidden; }
+@media only screen and (max-width: 660px) { .item__inner .title-h3 { overflow: hidden; height: 78px; font-size: 22px; } }
 .item__inner .title-h4 { margin-bottom: 9px; overflow: hidden; height: 78px; }
 .item__inner p { max-width: 500px; height: 84px; overflow: hidden; }
 .item__ppl { text-align: center; margin: 0 -5px; }
@@ -204,7 +205,7 @@ p { font-family: "ProximaNova Regular", Arial, sans-serif; font-size: 18px; line
 .informer p span span { font-size: 32px; }
 .informer p span.is-border { border-bottom: 1px dashed #0080ec; }
 
-.menu { padding: 0 15px; }
+.menu { padding: 0 15px; background: white; position: relative; z-index: 5; }
 @media only screen and (max-width: 1024px) { .menu { display: none; } }
 .menu__inner { max-width: 940px; margin: 0 auto; *zoom: 1; font-size: 0; }
 .menu__inner:after { content: " "; display: table; clear: both; }

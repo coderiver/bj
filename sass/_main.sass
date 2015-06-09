@@ -17,25 +17,16 @@
 	font-size: 0
 	min-height: 74px 
 	&__wrap
-		padding: 15px 15px 14px 
 		+transition(all 0.3s)
 		position: relative
 		background: #000 
-		z-index: 1000 
-		&:before
-			position: absolute
-			top: 0
-			left: 0
-			right: 0
-			background: #fff
-			+transition(all 0.3s)
-			height: 0
-			content: ""  
+		z-index: 1000  
 		&.is-active
 			position: fixed
 			top: 0
 			left: 0
 			right: 0
+			background: #fff 
 			&:before
 				height: 100%
 			.header__social
@@ -68,7 +59,8 @@
 		margin: 0 auto
 		+clr
 		position: relative
-		z-index: 5 
+		z-index: 5 		
+		padding: 15px 15px 14px 
 	&__left
 		float: left
 	&__right
@@ -346,6 +338,11 @@
 			font-size: 22px
 			text-shadow: 0 1px 0 rgba(0, 1, 1, 0.5)
 			height: 78px
+			+r2
+				max-width: 500px
+				height: 84px
+				overflow: hidden
+				font-size: 18px
 	&.is-small
 		width: 50%
 		+r2
@@ -395,6 +392,10 @@
 			margin-bottom: 23px
 			height: 66px
 			overflow: hidden
+			+r2
+				overflow: hidden
+				height: 78px
+				font-size: 22px
 		.title-h4
 			margin-bottom: 9px
 			overflow: hidden
@@ -600,6 +601,9 @@
 //menu
 .menu
 	padding: 0 15px
+	background: #fff 
+	position: relative
+	z-index: 5 
 	+r1
 		display: none
 	&__inner
