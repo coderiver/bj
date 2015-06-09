@@ -82,7 +82,7 @@ p { font-family: "ProximaNova Regular", Arial, sans-serif; font-size: 18px; line
 .header__social a.is-mail { background: url('../img/icons-s0b56799102.png') 0 -209px no-repeat; width: 24px; height: 17px; }
 .header__social a.is-mail:after { background: url('../img/icons-s0b56799102.png') 0 -182px no-repeat; width: 24px; height: 17px; }
 .header .btn-search { background: url('../img/icons-s0b56799102.png') 0 -270px no-repeat; width: 24px; height: 24px; position: relative; display: inline-block; vertical-align: top; margin: 0 20px 0 0; }
-@media only screen and (max-width: 660px) { .header .btn-search { margin: 0 10px 0 0; } }
+@media only screen and (max-width: 660px) { .header .btn-search { margin: 0 0 0 0; } }
 .header .btn-search:after { position: absolute; top: 0; left: 0; background: url('../img/icons-s0b56799102.png') 0 -236px no-repeat; width: 24px; height: 24px; content: ""; visibility: hidden; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0); opacity: 0; -moz-transition: all 0.3s; -o-transition: all 0.3s; -webkit-transition: all 0.3s; transition: all 0.3s; }
 
 .logo { display: inline-block; vertical-align: top; width: 68px; position: relative; }
