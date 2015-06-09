@@ -17,7 +17,7 @@
 	font-size: 0
 	min-height: 74px 
 	&__wrap
-		+transition(all 0.3s)
+		+transition(all 0.5s)
 		position: relative
 		background: #000 
 		z-index: 1000  
@@ -385,6 +385,33 @@
 				left: 0
 				border: 1px solid #000
 				content: "" 
+			&:after
+				position: absolute
+				top: 0
+				bottom: 0
+				right: 0
+				left: 0
+				background: #000
+				+opacity(0)
+				content: "" 
+				+transition(opacity 0.3s)
+			&:hover
+				&:after
+					+opacity(0.8)
+		&.is-photo
+			&:after
+				position: absolute
+				top: 0
+				bottom: 0
+				right: 0
+				left: 0
+				background: #000
+				+opacity(0)
+				content: "" 
+				+transition(opacity 0.3s)
+			&:hover
+				&:after
+					+opacity(0.8)
 		.title-h3, .title-h4, p
 			color: #fff 
 		.title-h3
@@ -434,6 +461,8 @@
 	&_banner
 		width: 100%
 		font-size: 0
+		+r1
+			display: none
 		a
 			+clr
 			display: block
