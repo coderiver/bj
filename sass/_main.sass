@@ -17,7 +17,7 @@
 	font-size: 0
 	min-height: 74px 
 	&__wrap
-		+transition(all 0.5s)
+		+transition(all 1s)
 		position: relative
 		background: #000 
 		z-index: 1000  
@@ -26,6 +26,7 @@
 			top: 0
 			left: 0
 			right: 0
+		&.is-color
 			background: #fff 
 			&:before
 				height: 100%
@@ -174,11 +175,10 @@
 		top: 100%
 		left: 0
 		text-align: left
-		margin: 11px 0 0 -15px 
 		background: #000
 		visibility: hidden
 		+opacity(0)
-		+transition(all 0.3s)
+		+transition(visibility 0.3s, opacity 0.3s, background 1s)
 	&.is-active
 		visibility: visible
 		+opacity(1)
