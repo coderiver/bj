@@ -284,8 +284,9 @@ p { font-family: "ProximaNova Regular", Arial, sans-serif; font-size: 18px; line
 .l-cover .sticker { font-size: 18px; padding: 8px 17px 7px; font-family: "FranklinGothicMediumC", Arial, sans-serif; }
 .l-top { *zoom: 1; }
 .l-top:after { content: " "; display: table; clear: both; }
-.l-top__banner { float: right; }
+.l-top__banner { float: right; width: 300px; }
 @media only screen and (max-width: 1024px) { .l-top__banner { display: none; } }
+.l-top__banner div.is-active { margin-top: 74px; }
 .l-top__block { overflow: hidden; padding: 0 20px 0 0; }
 .l-top__italic { margin-bottom: 14px; }
 .l-top__italic p { font-family: "PTSerifItalic", Arial, sans-serif; font-size: 22px; line-height: 30px; color: #010101; }
