@@ -63,10 +63,17 @@ body
 
 // fonts
 
++font("ProximaNova Light", proximanova-light)
 +font("ProximaNova Regular", ProximaNova-Regular)
 +font("ProximaNova Semibold", proxima_nova-semibold)
 +font("ProximaNova Bold", ProximaNova-Bold)
++font("FranklinGothicMediumC", FranklinGothicMediumC)
++font("PTSerifItalic", ptserifitalic)
++font("PTSerifBold", ptserifbold)
 
+
+=light
+	font-family: "ProximaNova Light", Arial, sans-serif
 =reg
 	font-family: "ProximaNova Regular", Arial, sans-serif
 =semi
@@ -74,6 +81,12 @@ body
 =bold
 	font-family: "ProximaNova Bold", Arial, sans-serif
 	
+=fmed
+	font-family: "FranklinGothicMediumC", Arial, sans-serif 
+=pit
+	font-family: "PTSerifItalic", Arial, sans-serif 
+=pb
+	font-family: "PTSerifBold", Arial, sans-serif 
 //reset
 a
 	text-decoration: none
@@ -83,19 +96,27 @@ h1, h2, h3, h4, h5, h6, strong, b
 i
 	font-style: normal
 
-.title-h2
+h1, .title-h1
+	+bold
+	font-size: 52px
+	line-height: 1.2
+	display: block
+	+r1
+		font-size: 36px
+
+h2, .title-h2
 	+bold
 	font-size: 36px
 	line-height: 1.2
 	+r1
 		font-size: 28px
 
-.title-h3
+h3, .title-h3
 	+bold
 	font-size: 28px
 	line-height: 1.2
 	
-.title-h4
+h4, .title-h4
 	+bold
 	font-size: 22px
 	line-height: 1.2
