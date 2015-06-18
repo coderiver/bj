@@ -143,4 +143,25 @@ head.ready(function() {
 	        });
 	   }
 	});
+
+	//search
+	$('.js-search-btn').on('click', function() {
+		$(this).toggleClass('is-active');
+		$('.js-search').slideToggle('fast');
+		$('.header').toggleClass('is-search');
+		return false;
+	});
+	//side-nav
+	$('.js-sidenav-btn').on('click', function() {
+		$('.js-sidenav').addClass('is-active');
+		$('.overlay').addClass('is-active');
+	});
+	$('.overlay').on('click', function() {
+		$('.js-sidenav').removeClass('is-active');
+		$('.overlay').removeClass('is-active');
+	});
+	$('.js-sidenav a').on('click', function() {
+		$('.js-sidenav').removeClass('is-active');
+		$('.overlay').removeClass('is-active');
+	});
 });

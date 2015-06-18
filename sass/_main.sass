@@ -16,6 +16,12 @@
 .header
 	font-size: 0
 	min-height: 74px 
+	+transition(min-height 0.2s)
+	&.is-search
+		min-height: 124px 
+		.search__result
+			+opacity(1)
+			visibility: visible
 	&__wrap
 		+transition(all 1s)
 		position: relative
@@ -37,6 +43,8 @@
 						visibility: visible
 						+opacity(1)
 			.btn-search
+				&:before
+					+s(close-black)
 				&:after
 					visibility: visible
 					+opacity(1)
@@ -113,6 +121,17 @@
 		margin: 0 20px 0 0 
 		+r2
 			margin: 0 0 0 0 
+		&:before
+			position: absolute
+			top: 50%
+			margin-top: -8px
+			left: 50%
+			margin-left: -8px 
+			+s(close-white)
+			content: ""
+			visibility: hidden
+			+opacity(0)
+			+transition(visibility 0.3s, opacity 0.3s)
 		&:after
 			position: absolute
 			top: 0
@@ -122,6 +141,14 @@
 			visibility: hidden
 			+opacity(0)
 			+transition(all 0.3s)
+		&.is-active
+			background: none
+			&:before			
+				visibility: visible
+				+opacity(1)
+			&:after
+				display: none
+			 
 			
 .logo
 	display: inline-block
@@ -172,17 +199,7 @@
 	overflow: hidden
 	text-align: center
 	+r1
-		position: absolute
-		top: 100%
-		left: 0
-		text-align: left
-		background: #000
-		visibility: hidden
-		+opacity(0)
-		+transition(visibility 0.3s, opacity 0.3s, background 1s)
-	&.is-active
-		visibility: visible
-		+opacity(1)
+		display: none
 	ul
 		position: relative
 	li
@@ -1264,3 +1281,166 @@
 		
 		img
 			max-width: 100%
+			
+//search
+.search
+	background-color: #D1D1D1
+	padding: 0 15px 
+	display: none
+	position: relative
+	&__inner
+		max-width: 940px
+		padding: 14px 0 14px 53px
+		margin: 0 auto 
+		+box
+		position: relative
+	&__input
+		font-size: 18px
+		color: #000
+		+placeholder-color(#000)
+		+bold
+		width: 100%
+		background: none 
+	&__btn
+		position: absolute
+		top: 12px
+		left: 0
+		+s(search-black)
+	i
+		+arr(20, 10, #D1D1D1, t)
+		position: absolute
+		top: -10px
+		right: 180px
+		+r(660)
+			right: 121px 
+	&__result
+		position: absolute
+		top: 100%
+		left: 0
+		right: 0
+		background: #fff
+		+opacity(0)
+		visibility: hidden
+		+transition(all 0.3s 0.4s)
+		padding: 0 15px 
+	&__result-inner
+		max-width: 940px
+		margin: 0 auto 
+	&__top
+		+clr
+		+reg
+		color: #646464
+		font-size: 20px
+		border-bottom: 1px solid #d1d1d1
+		padding: 13px 0  
+		span
+			color: #000
+	&__left
+		float: left
+	&__filter
+		float: right
+		a
+			color: #0080EC
+			&.is-active
+				color: #000 
+	&__item
+		padding: 20px 240px 20px 0
+		position: relative
+		min-height: 175px
+		+box
+		border-bottom: 1px solid #d1d1d1
+		&:last-child
+			border-bottom: none
+		h4, p
+			color: #000
+		h4
+			margin-bottom: 10px
+	&__img
+		position: absolute
+		top: 20px
+		right: 0
+		max-width: 220px
+		max-height: 132px 
+		img
+			max-width: 100%
+			max-height: 100%  
+	&__bottom
+		font-size: 0
+		padding: 15px 0 0 
+		.sticker
+			display: inline-block
+			vertical-align: middle
+			margin: 0 20px 0 0 
+	&__date
+		display: inline-block
+		vertical-align: middle
+		+reg
+		font-size: 14px
+		color: #646464
+		text-transform: uppercase
+		
+//side-nav
+.overlay
+	background: #000
+	position: fixed
+	top: 0
+	bottom: 0
+	left: 0
+	right: 0
+	z-index: 2000  
+	+opacity(0)
+	visibility: hidden
+	+transition(all 0.2s)
+	&.is-active
+		visibility: visible
+		+opacity(0.5)
+.side-nav
+	position: fixed
+	top: 0
+	left: -250px
+	bottom: 0
+	width: 240px
+	background: #fff 
+	z-index: 3000
+	padding: 20px 20px
+	+box 
+	+transition(left 0.4s)
+	overflow: auto
+	&.is-active
+		left: 0
+	&__box
+		margin-bottom: 10px
+		&.is-mob
+			display: none
+			+r1
+				display: block
+	&__title
+		display: block
+		+bold
+		font-size: 20px
+		color: #000
+		text-transform: uppercase
+		padding: 0 0 7px 
+	&__list
+		border-top: 3px solid #d1d1d1
+		padding: 12px 0 2px 
+		li
+			max-width: 90%
+			margin-bottom: 7px
+		a
+			font-size: 16px
+			+reg
+			color: #000
+			line-height: 1.2 
+			display: block
+			&:hover
+				color: #0080EC
+	&__list_mod
+		a
+			font-size: 16px
+			+reg
+			color: #000
+			line-height: 1.2 
+			+opacity(0.5)
+			&:hover
+				+opacity(1)

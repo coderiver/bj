@@ -11,6 +11,34 @@
 	<!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
 </head>
 <body>
+<div class="overlay"></div>
+<div class="side-nav js-sidenav">
+	<div class="side-nav__box is-mob">
+		<span class="side-nav__title">Разделы</span>
+		<ul class="side-nav__list">
+			<li><a href="#">Люди</a></li>
+			<li><a href="#">Город</a></li>
+			<li><a href="#">Места И Вещи</a></li>
+			<li><a href="#">Планы</a></li>
+		</ul>
+	</div>
+	<div class="side-nav__box">
+		<span class="side-nav__title">Рубрики</span>
+		<ul class="side-nav__list">
+			<li><a href="#">Мейкеры</a></li>
+			<li><a href="#">I am from</a></li>
+			<li><a href="#">Одежный выбор</a></li>
+			<li><a href="#">За еду</a></li>
+			<li><a href="#">Пытайтесь повторить это дома</a></li>
+			<li><a href="#">Выходное пособие</a></li>
+		</ul>
+		<ul class="side-nav__list side-nav__list_mod">
+			<li><a href="#">О сайте</a></li>
+			<li><a href="#">Рекламодателям</a></li>
+			<li><a href="#">Соглашения и правила</a></li>
+		</ul>
+	</div>
+</div>
 <!-- BEGIN  out-->
 <div class="out">
 	<!-- begin top  -->
@@ -40,14 +68,14 @@
 		<div class="header__wrap js-fixed">		
 			<div class="header__inner">
 				<div class="header__left">
-					<button class="btn-nav js-nav-btn"><span></span></button>
+					<button class="btn-nav js-sidenav-btn"><span></span></button>
 					<a href="#" class="logo">
 						<img src="img/svg/logo.svg" alt="" class="is-white">
 						<img src="img/svg/logo-black.svg" alt="" class="is-black">
 					</a>
 				</div>
 				<div class="header__right">
-					<button class="btn-search"></button>
+					<button class="btn-search js-search-btn"></button>
 					<ul class="header__social">
 						<li><a href="#" class="is-fb"></a></li>
 						<li><a href="#" class="is-tw"></a></li>
@@ -63,6 +91,44 @@
 						<li><a href="#">ПЛаны</a></li>
 					</ul>
 				</nav>
+			</div>
+			<div class="search js-search">
+				<div class="search__inner">
+					<i></i>
+					<button class="search__btn"></button>
+					<input type="text" class="search__input" placeholder="Поиск">
+				</div>				
+				<div class="search__result">
+					<div class="search__result-inner">
+						<div class="search__top">
+							<div class="search__left">Результатов поиска: <span>2</span></div>
+							<div class="search__filter">Сортировать: <a href="#" class="is-active">по дате</a> <a href="#">по релевантности</a></div>
+						</div>
+						<div class="search__items">
+							<div class="search__item">
+								<a href="#">
+									<h4>Страна мечты. Почему я завидую Саакашвили</h4>
+									<p>Он является советником президента Петра Порошенко и главой Консультативного международного совета.</p>
+								</a>								
+								<div class="search__bottom">
+									<a href="#" class="sticker">Город</a>
+									<time class="search__date">17 июня 2015 года</time>
+								</div>
+								<a href="#" class="search__img"><img src="img/search-img.png" alt=""></a>
+							</div>
+							<div class="search__item">
+								<a href="#">
+									<h4>Страна мечты. Почему я завидую Саакашвили</h4>
+									<p>Он является советником президента Петра Порошенко и главой Консультативного международного совета.</p>
+								</a>
+								<div class="search__bottom">
+									<a href="#" class="sticker">Город</a>
+									<time class="search__date">17 июня 2015 года</time>
+								</div>
+							</div>
+						</div>
+					</div>						
+				</div>
 			</div>
 		</div>		
 	</header>
