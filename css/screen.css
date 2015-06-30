@@ -501,7 +501,7 @@ p { font-family: "ProximaNova Regular", Arial, sans-serif; font-size: 18px; line
 .side-nav__list_mod a:hover { filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false); opacity: 1; }
 
 .error { border: 3px solid #d1d1d1; max-width: 940px; margin: 10px auto; text-align: center; padding: 76px 20px 72px; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
-.error__title { background: url(../img/icons/error.png) no-repeat top left; color: #d1d1d1; font-size: 120px; font-family: "ProximaNova Bold", Arial, sans-serif; line-height: 1; display: inline-block; padding: 33px 0 2px; }
+.error__title { background: url(../img/icons/error.png) no-repeat top left; color: #d1d1d1; font-size: 120px; font-family: "ProximaNova Bold", Arial, sans-serif; line-height: 1; display: inline-block; padding: 33px 0 2px; max-width: 310px; width: 100%; }
 .error p { font-size: 24px; color: black; font-family: "ProximaNova Bold", Arial, sans-serif; margin-bottom: 84px; }
 .error__link { font-family: "ProximaNova Bold", Arial, sans-serif; font-size: 24px; color: #0080ec; text-decoration: underline; }
 .error__link:hover { text-decoration: none; }
