@@ -36,26 +36,6 @@ head.ready(function() {
 			$('.js-fixed').removeClass('is-active');
 		};
 	});
-	$(window).scroll(function() {
-		header = $('.header').offset().top;
-		scrollTop = $(window).scrollTop();
-		if (scrollTop > header+$('.js-banner').height()/2) {
-			$('.js-fixed').addClass('is-color');
-		}
-		else {
-			$('.js-fixed').removeClass('is-color');
-		};
-	});
-	$(window).load(function() {
-		header = $('.header').offset().top;
-		scrollTop = $(window).scrollTop();
-		if (scrollTop > header+$('.js-banner').height()/2) {
-			$('.js-fixed').addClass('is-color');
-		}
-		else {
-			$('.js-fixed').removeClass('is-color');
-		};
-	});
 
 	function getScrollTop(){
 		if(typeof pageYOffset!= 'undefined'){
@@ -67,23 +47,22 @@ head.ready(function() {
 	    	d = (d.clientHeight)? d : b;
 	    	return d.scrollTop;
 		}
-	}
-	var scrollTop = 0;
+	};
+
+	var scrollTop2 = 0;
+
 	$(window).on('scroll', function() {
+
 		var scrollNow = $(window).scrollTop();
-		if (scrollNow > scrollTop) {
-			if(getScrollTop() > 100) {
-				$('.js-fixed').removeClass('is-full');
+
+		if (scrollNow > scrollTop2) {
+			if(getScrollTop() > $('.top').outerHeight() + $('.header__black').outerHeight()) {
 				$('.js-fixed').addClass('is-hidden');
-			}
-			else {
-				$('.js-fixed').removeClass('is-full');
-			}
+			};
 		}
 		else {
-			if (scrollTop - scrollNow > 50) {				
-				if(getScrollTop() > 10) {
-					$('.js-fixed').addClass('is-full');
+			if (scrollTop2 - scrollNow > 0) {				
+				if(getScrollTop() < 10) {
 					$('.js-fixed').removeClass('is-hidden');
 				}
 				else {
@@ -91,10 +70,7 @@ head.ready(function() {
 				}
 			};
 		}
-		scrollTop = scrollNow;
-		if (getScrollTop() < $('.main').offset().top) {
-			$('.js-fixed').removeClass('is-hidden');
-		};
+		scrollTop2 = scrollNow;
 	});
 
 	//nav
