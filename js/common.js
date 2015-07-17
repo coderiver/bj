@@ -57,6 +57,46 @@ head.ready(function() {
 		};
 	});
 
+	function getScrollTop(){
+		if(typeof pageYOffset!= 'undefined'){
+			return pageYOffset;
+		}
+		else{
+			var b = document.body;
+			var d = document.documentElement;
+	    	d = (d.clientHeight)? d : b;
+	    	return d.scrollTop;
+		}
+	}
+	var scrollTop = 0;
+	$(window).on('scroll', function() {
+		var scrollNow = $(window).scrollTop();
+		if (scrollNow > scrollTop) {
+			if(getScrollTop() > 100) {
+				$('.js-fixed').removeClass('is-full');
+				$('.js-fixed').addClass('is-hidden');
+			}
+			else {
+				$('.js-fixed').removeClass('is-full');
+			}
+		}
+		else {
+			if (scrollTop - scrollNow > 50) {				
+				if(getScrollTop() > 10) {
+					$('.js-fixed').addClass('is-full');
+					$('.js-fixed').removeClass('is-hidden');
+				}
+				else {
+					$('.js-fixed').removeClass('is-hidden');
+				}
+			};
+		}
+		scrollTop = scrollNow;
+		if (getScrollTop() < $('.main').offset().top) {
+			$('.js-fixed').removeClass('is-hidden');
+		};
+	});
+
 	//nav
 	$('.js-nav-btn').on('click', function() {
 		$('.js-nav').toggleClass('is-active');

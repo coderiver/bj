@@ -47,22 +47,6 @@
 	</div>
 	<!-- end top -->
 	
-	<div class="menu">
-		<div class="menu__inner">
-			<a href="#" class="p-logo"><img src="img/p-logo.gif" alt=""></a>
-			<ul class="menu__list">
-				<li><a href="#">экономика</a></li>
-				<li><a href="#" class="is-active">европа</a></li>
-				<li><a href="#">форум</a></li>
-				<li><a href="#">блоги</a></li>
-				<li><a href="#">историческая правда</a></li>
-				<li><a href="#">жизнь</a></li>
-				<li><a href="#">спорт</a></li>
-				<li><a href="#">киев</a></li>
-				<li><a href="#">таблоid</a></li>
-			</ul>
-		</div>
-	</div>
 	<!-- begin header  -->
 	<header class="header">
 		<div class="header__wrap js-fixed">		
@@ -70,12 +54,14 @@
 				<div class="header__left">
 					<button class="btn-nav js-sidenav-btn"><span></span></button>
 					<a href="#" class="logo">
-						<img src="img/svg/logo.svg" alt="" class="is-white">
-						<img src="img/svg/logo-black.svg" alt="" class="is-black">
+						<img src="img/svg/logo-s.svg" alt="" class="is-white">
 					</a>
 				</div>
 				<div class="header__right">
-					<button class="btn-search js-search-btn"></button>
+					<div class="header__text">
+						<p>Мы задаем вопросы тогда, когда другие ставят точку</p>
+						<span>Скептик</span>
+					</div>
 					<ul class="header__social">
 						<li><a href="#" class="is-fb"></a></li>
 						<li><a href="#" class="is-tw"></a></li>
@@ -83,54 +69,72 @@
 						<li><a href="#" class="is-mail"></a></li>
 					</ul>
 				</div>
-				<nav class="nav js-nav">
+				<!-- <nav class="nav js-nav">
 					<ul class="nav__list">
 						<li><a href="#">люди</a></li>
 						<li><a href="#">Город</a></li>
 						<li><a href="#">Места И вещи</a></li>
 						<li><a href="#">ПЛаны</a></li>
 					</ul>
-				</nav>
+				</nav> -->
 			</div>
-			<div class="search js-search">
-				<div class="search__inner">
-					<i></i>
-					<button class="search__btn"></button>
-					<input type="text" class="search__input" placeholder="Поиск">
-				</div>				
-				<div class="search__result">
-					<div class="search__result-inner">
-						<div class="search__top">
-							<div class="search__left">Результатов поиска: <span>2</span></div>
-							<div class="search__filter">Сортировать: <a href="#" class="is-active">по дате</a> <a href="#">по релевантности</a></div>
+			<div class="header__black">
+				<div class="header__inner">
+					<div class="menu">
+						<div class="menu__inner">
+							<ul class="menu__list">
+								<li><a href="#">экономика</a></li>
+								<li><a href="#">политика</a></li>
+								<li><a href="#">мир</a></li>
+								<li><a href="#">общество</a></li>
+								<li><a href="#">война</a></li>
+								<li><a href="#">мнения</a></li>
+								<li><a href="#" class="menu__hot">hot</a></li>
+							</ul>
 						</div>
-						<div class="search__items">
-							<div class="search__item">
-								<a href="#">
-									<h4>Страна мечты. Почему я завидую Саакашвили</h4>
-									<p>Он является советником президента Петра Порошенко и главой Консультативного международного совета.</p>
-								</a>								
-								<div class="search__bottom">
-									<a href="#" class="sticker">Город</a>
-									<time class="search__date">17 июня 2015 года</time>
-								</div>
-								<a href="#" class="search__img"><img src="img/search-img.png" alt=""></a>
-							</div>
-							<div class="search__item">
-								<a href="#">
-									<h4>Страна мечты. Почему я завидую Саакашвили</h4>
-									<p>Он является советником президента Петра Порошенко и главой Консультативного международного совета.</p>
-								</a>
-								<div class="search__bottom">
-									<a href="#" class="sticker">Город</a>
-									<time class="search__date">17 июня 2015 года</time>
-								</div>
-							</div>
-						</div>
-					</div>						
+					</div>
+					<button class="btn-search js-search-btn"></button>
 				</div>
 			</div>
 		</div>		
+		<div class="search js-search">
+			<div class="search__inner">
+				<i></i>
+				<button class="search__btn"></button>
+				<input type="text" class="search__input" placeholder="Поиск">
+			</div>				
+			<div class="search__result">
+				<div class="search__result-inner">
+					<div class="search__top">
+						<div class="search__left">Результатов поиска: <span>2</span></div>
+						<div class="search__filter">Сортировать: <a href="#" class="is-active">по дате</a> <a href="#">по релевантности</a></div>
+					</div>
+					<div class="search__items">
+						<div class="search__item">
+							<a href="#">
+								<h4>Страна мечты. Почему я завидую Саакашвили</h4>
+								<p>Он является советником президента Петра Порошенко и главой Консультативного международного совета.</p>
+							</a>								
+							<div class="search__bottom">
+								<a href="#" class="sticker">Город</a>
+								<time class="search__date">17 июня 2015 года</time>
+							</div>
+							<a href="#" class="search__img"><img src="img/search-img.png" alt=""></a>
+						</div>
+						<div class="search__item">
+							<a href="#">
+								<h4>Страна мечты. Почему я завидую Саакашвили</h4>
+								<p>Он является советником президента Петра Порошенко и главой Консультативного международного совета.</p>
+							</a>
+							<div class="search__bottom">
+								<a href="#" class="sticker">Город</a>
+								<time class="search__date">17 июня 2015 года</time>
+							</div>
+						</div>
+					</div>
+				</div>						
+			</div>
+		</div>
 	</header>
 	<!-- end header -->
 	
@@ -138,12 +142,12 @@
 	<main class="main">
 
 		<!-- begin informer  -->
-		<div class="informer">
+		<!-- <div class="informer">
 			<a href="#" class="informer__inner">
 				<p><span><span>24</span> мая</span> пройдет всеукраинская ярмарка комнатных цветов и растений.</p>
 				<p>Киев, <span class="is-border">Мистецький Арсенал</span>.</p>
 			</a>			
-		</div>
+		</div> -->
 		<!-- end informer -->
 
 		<!-- begin banner  -->
@@ -171,20 +175,49 @@
 		<div class="content">
 			<div class="row">
 				<div class="items-66 is-left">
-					<div class="item is-big">
-						<a href="#" class="item__inner is-img" style="background-image: url(img/item1.jpg);">
-							<small class="sticker">город</small>
-							<div class="item__text">
-								<h3 class="title-h3">Девяносто шесть городов отлично приспособленных для жизни людей</h3>
-								<p>Economist Intelligence ежегодно проводит отчеты и составляет рейтинги касающиеся экономики населения</p>
-							</div>
-							<div class="item__info">
-								<ul>
-									<li class="is-view">548</li>
-									<li class="is-comment">167</li>
-								</ul>
-							</div>
-						</a>
+					<div class="item is-small is-left">
+						<div class="news">
+							<h5 class="title-h5">Новости</h5>
+							<div class="news__items">
+								<div class="news__item">
+									<time class="date">11 мая в 22:59</time>
+									<a href="#" class="news__title">Праздник со слезами на глазах</a>
+								</div>
+								<div class="news__item">
+									<time class="date">11 мая в 22:25</time>
+									<a href="#" class="news__title">Героя Новороссии разыски-вает российская полиция</a>
+								</div>
+								<div class="news__item">
+									<time class="date">11 мая в 21:30</time>
+									<a href="#" class="news__title">ДНР и ЛНР хотят в Украину</a>
+								</div>
+								<div class="news__item">
+									<time class="date">11 мая в 21:15</time>
+									<a href="#" class="news__title">Франция продаст «Мистрали» Китаю?</a>
+								</div>
+								<div class="news__item">
+									<time class="date">11 мая в 20:59</time>
+									<a href="#" class="news__title">В мировом рейтинге образо- вания Украина на 38 месте</a>
+								</div>
+								<div class="news__item">
+									<time class="date">11 мая в 20:25</time>
+									<a href="#" class="news__title">Бурунди: генерал заявил о смещении президента</a>
+								</div>
+								<div class="news__item">
+									<time class="date">11 мая в 19:30</time>
+									<a href="#" class="news__title">Спецстатус Донбасса и местные выборы так же важны, как и переми</a>
+								</div>
+								<div class="news__item">
+									<time class="date">11 мая в 19:15</time>
+									<a href="#" class="news__title">Польша усилит контроль за трудоустройством</a>
+								</div>
+								<div class="news__item">
+									<time class="date">11 мая в 18:25</time>
+									<a href="#" class="news__title">Карта АТО. 11 мая</a>
+								</div>
+							</div>						
+							<a href="#" class="news__link">Все новости</a>
+						</div>
 					</div>
 					<div class="item is-small">
 						<a href="#" class="item__inner is-img" style="background-image: url(img/item2.jpg);">
@@ -202,7 +235,7 @@
 						</a>
 					</div>
 					<div class="item is-small">
-						<a href="#" class="item__inner is-border">
+						<a href="#" class="item__inner">
 							<small class="sticker">люди</small>
 							<div class="item__ppl">
 								<img src="img/ppl.jpg" alt="" class="item__img">
