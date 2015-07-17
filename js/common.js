@@ -180,4 +180,20 @@ head.ready(function() {
 		$('.js-sidenav').removeClass('is-active');
 		$('.overlay').removeClass('is-active');
 	});
+
+	 $('.slider-for').slick({
+	  slidesToShow: 1,
+	  slidesToScroll: 1,
+	  arrows: true,
+	  fade: true,
+	  asNavFor: '.slider-nav'
+	});
+	$('.slider-nav').slick({
+	  slidesToShow: 4,
+	  slidesToScroll: 1,
+	  asNavFor: '.slider-for',
+	  dots: false,
+	  centerMode: false,
+	  focusOnSelect: true
+	});
 });

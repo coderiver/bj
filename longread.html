@@ -47,90 +47,100 @@
 	</div>
 	<!-- end top -->
 	
-	<div class="menu">
-		<div class="menu__inner">
-			<a href="#" class="p-logo"><img src="img/p-logo.gif" alt=""></a>
-			<ul class="menu__list">
-				<li><a href="#">экономика</a></li>
-				<li><a href="#" class="is-active">европа</a></li>
-				<li><a href="#">форум</a></li>
-				<li><a href="#">блоги</a></li>
-				<li><a href="#">историческая правда</a></li>
-				<li><a href="#">жизнь</a></li>
-				<li><a href="#">спорт</a></li>
-				<li><a href="#">киев</a></li>
-				<li><a href="#">таблоid</a></li>
-			</ul>
-		</div>
-	</div>
 	<!-- begin header  -->
 	<header class="header">
 		<div class="header__wrap js-fixed">		
-			<div class="header__inner">
-				<div class="header__left">
-					<button class="btn-nav js-sidenav-btn"><span></span></button>
-					<a href="#" class="logo">
-						<img src="img/svg/logo.svg" alt="" class="is-white">
-						<img src="img/svg/logo-black.svg" alt="" class="is-black">
-					</a>
+			<div class="header__white">
+				<div class="header__inner">
+					<div class="header__left">
+						<button class="btn-nav js-sidenav-btn"><span></span></button>
+						<a href="#" class="logo">
+							<img src="img/svg/logo-s.svg" alt="" class="is-white">
+						</a>
+					</div>
+					<div class="header__right">
+						<div class="header__text">
+							<span class="is-visible">Скептик</span>
+						</div>
+						<button class="btn-search js-search-btn"></button>
+						<ul class="header__social">
+							<li><a href="#" class="is-fb"></a></li>
+							<li><a href="#" class="is-tw"></a></li>
+							<li><a href="#" class="is-instagram"></a></li>
+							<li><a href="#" class="is-mail"></a></li>
+						</ul>
+					</div>
+					<!-- <nav class="nav js-nav">
+						<ul class="nav__list">
+							<li><a href="#">люди</a></li>
+							<li><a href="#">Город</a></li>
+							<li><a href="#">Места И вещи</a></li>
+							<li><a href="#">ПЛаны</a></li>
+						</ul>
+					</nav> -->
 				</div>
-				<div class="header__right">
+			</div>			
+			<div class="header__black">
+				<div class="header__inner">
+					<div class="menu">
+						<div class="menu__inner">
+							<ul class="menu__list">
+								<li><a href="#">экономика</a></li>
+								<li><a href="#">политика</a></li>
+								<li><a href="#">мир</a></li>
+								<li><a href="#">общество</a></li>
+								<li><a href="#">война</a></li>
+								<li><a href="#">мнения</a></li>
+								<li><a href="#" class="menu__hot">hot</a></li>
+							</ul>
+						</div>
+					</div>
 					<button class="btn-search js-search-btn"></button>
-					<ul class="header__social">
-						<li><a href="#" class="is-fb"></a></li>
-						<li><a href="#" class="is-tw"></a></li>
-						<li><a href="#" class="is-instagram"></a></li>
-						<li><a href="#" class="is-mail"></a></li>
-					</ul>
-				</div>
-				<nav class="nav js-nav">
-					<ul class="nav__list">
-						<li><a href="#">люди</a></li>
-						<li><a href="#">Город</a></li>
-						<li><a href="#">Места И вещи</a></li>
-						<li><a href="#">ПЛаны</a></li>
-					</ul>
-				</nav>
-			</div>
-			<div class="search js-search">
-				<div class="search__inner">
-					<i></i>
-					<button class="search__btn"></button>
-					<input type="text" class="search__input" placeholder="Поиск">
-				</div>				
-				<div class="search__result">
-					<div class="search__result-inner">
-						<div class="search__top">
-							<div class="search__left">Результатов поиска: <span>2</span></div>
-							<div class="search__filter">Сортировать: <a href="#" class="is-active">по дате</a> <a href="#">по релевантности</a></div>
-						</div>
-						<div class="search__items">
-							<div class="search__item">
-								<a href="#">
-									<h4>Страна мечты. Почему я завидую Саакашвили</h4>
-									<p>Он является советником президента Петра Порошенко и главой Консультативного международного совета.</p>
-								</a>								
-								<div class="search__bottom">
-									<a href="#" class="sticker">Город</a>
-									<time class="search__date">17 июня 2015 года</time>
-								</div>
-								<a href="#" class="search__img"><img src="img/search-img.png" alt=""></a>
-							</div>
-							<div class="search__item">
-								<a href="#">
-									<h4>Страна мечты. Почему я завидую Саакашвили</h4>
-									<p>Он является советником президента Петра Порошенко и главой Консультативного международного совета.</p>
-								</a>
-								<div class="search__bottom">
-									<a href="#" class="sticker">Город</a>
-									<time class="search__date">17 июня 2015 года</time>
-								</div>
-							</div>
-						</div>
-					</div>						
 				</div>
 			</div>
 		</div>		
+		<div class="search js-search">
+			<div class="search__inner">
+				<i></i>
+				<button class="search__btn"></button>
+				<input type="text" class="search__input" placeholder="Поиск">
+			</div>				
+			<div class="search__result">
+				<div class="search__result-inner">
+					<div class="search__top">
+						<div class="search__left">Результатов поиска: <span>2</span></div>
+						<div class="search__filter">
+							<span>Сортировать:</span>
+							<a href="#" class="is-active">по дате</a> 
+							<a href="#">по релевантности</a>
+						</div>
+					</div>
+					<div class="search__items">
+						<div class="search__item">
+							<a href="#">
+								<h4>Страна мечты. Почему я завидую Саакашвили</h4>
+								<p>Он является советником президента Петра Порошенко и главой Консультативного международного совета.</p>
+							</a>								
+							<div class="search__bottom">
+								<a href="#" class="sticker">Город</a>
+								<time class="search__date">17 июня 2015 года</time>
+							</div>
+							<a href="#" class="search__img"><img src="img/search-img.png" alt=""></a>
+						</div>
+						<div class="search__item">
+							<a href="#">
+								<h4>Страна мечты. Почему я завидую Саакашвили</h4>
+								<p>Он является советником президента Петра Порошенко и главой Консультативного международного совета.</p>
+							</a>
+							<div class="search__bottom">
+								<a href="#" class="sticker">Город</a>
+								<time class="search__date">17 июня 2015 года</time>
+							</div>
+						</div>
+					</div>
+				</div>						
+			</div>
+		</div>
 	</header>
 	<!-- end header -->
 	
@@ -453,7 +463,7 @@
 						<div class="l-ppls__author">
 							<div class="l-ppls__img"><img src="img/alina.png" alt=""></div>
 							<a href="#" class="l-ppls__name">Алина Громкая</a>
-							<span class="l-ppls__info">Главный редактор портала БЖ</span>
+							<span class="l-ppls__info">Главный редактор портала Скептик</span>
 						</div>
 						<div class="l-ppls__text">
 							<p>Столица Австрии Вена - одна из красивейших столиц мира - расположилась на втором месте рейтинга. Население городской агломерации составляет 25% всего населения страны, а непосредственно столицы - 1,7 миллионов человек. Вена - не только самый крупный город Австрии, но и центр политической, экономической и культурной жизни страны. Одновременно с этим богатая двухтысячелетняя история австрийской столицы делает ее чрезвычайно привлекательной для туристов со всего мира. Старый город столицы находится под охраной ЮНЕСКО. Must-see Вены - королевский дворец Шенбрунн и зимняя резиденция Габсбургов Хофбург с тремя музеями, готический собор Святого Стефана и церковь Святого Петра, Венская Опера, современный жилой дом Хундертвассера. Музеев в Вене - больше восьмидесяти, чтобы посетить их все, сюда стоит отправиться надолго.</p>
@@ -532,6 +542,33 @@
 
 				<!-- begin l-similar  -->
 				<div class="l-similar">
+					<h3 class="title-h3">Главное</h3>
+					
+					<div class="row">
+						<div class="longread">
+							<a href="#" class="longread__inner" style="background-image: url(img/longread.jpg);">
+								<div class="longread__cover">
+									<div class="longread__sticker">
+										<small class="sticker">Планы</small>
+									</div>						
+									<h2 class="title-h2">Розмарин и другая полезная трава: <br> что можно вырастить на окне</h2>
+									<p>Фотограф, на два месяца превратил свою квартиру в теплицу: закупил семян и начал выращивать травы</p>
+								</div>					
+								<div class="longread__info">
+									<ul>
+										<li class="is-view">548</li>
+										<li class="is-comment">167</li>
+									</ul>
+								</div>
+							</a>
+						</div>	
+					</div>	
+
+				</div>
+				<!-- end l-similar -->
+
+				<!-- begin l-similar  -->
+				<div class="l-similar">
 					<h3 class="title-h3">Похожие статьи</h3>
 					<div class="row">				
 						<div class="item is-medium">
@@ -557,7 +594,7 @@
 								<small class="sticker">Город</small>
 								<div class="item__photo">
 									<img src="img/item-photo.jpg" alt="">
-									<h4 class="title-h4">БЖ побывал в семи новых хостелах которые открылись за 2014 год</h4>
+									<h4 class="title-h4">Скептик побывал в семи новых хостелах которые открылись за 2014 год</h4>
 									<p>Наша редакция провела ревизию всех новых хостелов, которые открылись в Киеве в этом году. Вердикт читайте в материале.</p>
 								</div>
 								<div class="item__info">
@@ -572,7 +609,7 @@
 							<a href="#" class="item__inner is-img" style="background-image: url(img/item4.jpg);">
 								<small class="sticker">МЕСТА И ВЕЩИ</small>
 								<div class="item__text">
-									<h4 class="title-h4">Редакция БЖ составила путеводитель «по лету» в столице </h4>
+									<h4 class="title-h4">Редакция Скептик составила путеводитель «по лету» в столице </h4>
 									<p>Не знаете чем заняться летом в Киеве? Полный спектр развлечений в нашем материале</p>
 								</div>
 								<div class="item__info">
@@ -584,33 +621,6 @@
 							</a>
 						</div>
 					</div>
-				</div>
-				<!-- end l-similar -->
-
-				<!-- begin l-similar  -->
-				<div class="l-similar">
-					<h3 class="title-h3">Главное</h3>
-					
-					<div class="row">
-						<div class="longread">
-							<a href="#" class="longread__inner" style="background-image: url(img/longread.jpg);">
-								<div class="longread__cover">
-									<div class="longread__sticker">
-										<small class="sticker">Планы</small>
-									</div>						
-									<h2 class="title-h2">Розмарин и другая полезная трава: <br> что можно вырастить на окне</h2>
-									<p>Фотограф, на два месяца превратил свою квартиру в теплицу: закупил семян и начал выращивать травы</p>
-								</div>					
-								<div class="longread__info">
-									<ul>
-										<li class="is-view">548</li>
-										<li class="is-comment">167</li>
-									</ul>
-								</div>
-							</a>
-						</div>	
-					</div>	
-
 				</div>
 				<!-- end l-similar -->
 
