@@ -112,6 +112,13 @@
 		position: relative
 		z-index: 5 		
 		padding: 15px 15px 14px 
+	&__inn
+		max-width: 940px
+		margin: 0 auto
+		+clr
+		position: relative
+		z-index: 5 		
+		padding: 0 15px
 	&__left
 		float: left
 	&__right
@@ -140,8 +147,6 @@
 			text-transform: uppercase
 			font-size: 28px
 			line-height: 0.8
-			&.is-visible
-				display: block
 	&__social
 		float: right
 		li
@@ -182,7 +187,7 @@
 	float: right
 	+s(search-white)
 	position: relative
-	margin-top: 10px
+	margin-top: 23px
 	+r2
 		margin: 0
 	&:before
@@ -529,6 +534,8 @@
 	&__ppl
 		text-align: center
 		margin: 0 -5px 
+	&__opinions
+		text-align: center
 		.title-h3, .title-h4, p
 			color: #000 
 	&__text
@@ -537,6 +544,16 @@
 		left: 19px
 		right: 19px
 		z-index: 5
+		span
+			display: block
+			margin-top: -10px
+			color: #FFF
+			font-size: 18px
+			+reg
+		.date
+			display: block
+			margin: 20px 0 15px
+			color: #FFF
 	.sticker
 		position: absolute
 		top: 0
@@ -623,10 +640,6 @@
 .news
 	padding: 16px 20px 15px
 	background-color: #CECECE 
-	.date
-		margin-bottom: 4px
-		font-size: 14px
-		+reg
 	&__title
 		color: #000
 		display: block 
@@ -659,6 +672,11 @@
 			display: inline-block
 			margin-left: 10px
 			+s(news-arr) 
+.date
+	margin-bottom: 4px
+	font-size: 14px
+	color: #747474 
+	+reg
 
 //longread
 .longread
@@ -782,14 +800,15 @@
 			padding: 0 40px 0 0
 		a
 			font-size: 20px
-			padding: 6px 0 4px
+			padding: 21px 0 18px
 			display: inline-block 
 			vertical-align: middle
 			color: #FFF
 			+reg 
 			text-transform: uppercase
 			&.is-active, &:hover
-				color: darken(#FFF, 20%)
+				border-bottom: 4px solid #FFF
+				padding-bottom: 14px
 			&.menu__hot
 				+bold
 				&:before
@@ -1434,6 +1453,7 @@
 		+r(660)
 			right: 121px 
 	&__result
+		display: none
 		position: relative
 		top: 100%
 		left: 0
@@ -1662,7 +1682,7 @@
 				margin: 5px 4px 30px 0 
 	&__slider
 		.slider-nav
-			margin: 20px 0
+			margin: 20px -20px 20px 0
 			img
 				margin-right: 20px
 				&:last-child
