@@ -106,7 +106,7 @@ p { font-family: "ProximaNova Regular", Arial, sans-serif; font-size: 18px; line
 .header__wrap.is-active .header__black { position: absolute; top: 100%; left: 0; right: 0; }
 .header__wrap.is-hidden .header__black { -moz-transform: translateY(-100%); -ms-transform: translateY(-100%); -webkit-transform: translateY(-100%); transform: translateY(-100%); z-index: 1; }
 .header__white { background: #fff; z-index: 2; position: relative; }
-.header__black { position: relative; background: #000; -moz-transition: all 0.4s; -o-transition: all 0.4s; -webkit-transition: all 0.4s; transition: all 0.4s; -webkit-transform: translateY(0); -moz-transform: translateY(0); -ms-transform: translateY(0); -o-transform: translateY(0); transform: translateY(0); *zoom: 1; }
+.header__black { position: relative; background: #000; -moz-transition: translate 0.4s; -o-transition: translate 0.4s; -webkit-transition: translate 0.4s; transition: translate 0.4s; -webkit-transform: translateY(0); -moz-transform: translateY(0); -ms-transform: translateY(0); -o-transform: translateY(0); transform: translateY(0); *zoom: 1; }
 .header__black:after { content: " "; display: table; clear: both; }
 @media only screen and (max-width: 1024px) { .header__black { display: none; } }
 .header__black.is-hidden { -webkit-transform: translateY(-100%); -moz-transform: translateY(-100%); -ms-transform: translateY(-100%); -o-transform: translateY(-100%); transform: translateY(-100%); }
@@ -525,8 +525,9 @@ p { font-family: "ProximaNova Regular", Arial, sans-serif; font-size: 18px; line
 .error__link { font-family: "ProximaNova Bold", Arial, sans-serif; font-size: 24px; color: #0080EC; text-decoration: underline; }
 .error__link:hover { text-decoration: none; }
 
+.content__main-title h1 { margin: 20px 0; font-size: 32px; font-weight: normal; font-family: "ProximaNova Bold", Arial, sans-serif; }
+
 .economics { font-family: "ProximaNova Regular", Arial, sans-serif; }
-.economics__main-title h1 { margin: 20px 0; font-size: 32px; font-weight: normal; font-family: "ProximaNova Bold", Arial, sans-serif; }
 .economics__title { position: relative; width: 100%; padding-bottom: 10px; *zoom: 1; }
 .economics__title:after { content: " "; display: table; clear: both; }
 .economics__title .date { font-size: 18px; color: #747474; }
@@ -549,10 +550,21 @@ p { font-family: "ProximaNova Regular", Arial, sans-serif; font-size: 18px; line
 
 .opinion__wrap { padding: 15px 0; border-bottom: 1px solid #dbdbdb; font-size: 0; font-family: "ProximaNova Regular", Arial, sans-serif; }
 .opinion__wrap h5 { padding: 10px 0; font-size: 24px; line-height: 1.2; }
-.opinion__wrap ol { padding-left: 30px; }
-.opinion__wrap ol li { padding: 10px 0px; }
-.opinion__wrap ol li a { font-size: 18px; color: #0080EC; line-height: 1.2; }
+.opinion__wrap ol { padding: 10px 0 0 40px; font-size: 28px; line-height: 0.6; list-style-type: decimal; }
+.opinion__wrap ol li { padding-bottom: 20px; }
+.opinion__wrap ol li:last-child { padding-bottom: 0; }
+.opinion__wrap ol li a { display: inline-block; vertical-align: top; margin: -7px 0 0 -5px; font-size: 18px; color: #0080EC; line-height: 1.2; }
 .opinion__img { display: inline-block; vertical-align: top; width: 120px; height: 120px; }
 .opinion__img img { width: 100%; }
 .opinion__text { display: inline-block; vertical-align: top; width: 160px; margin-left: 20px; }
 .opinion__text p { font-size: 16px; color: #747474; }
+.opinion__banner { margin-top: 20px; }
+
+.all-news__wrapper { padding: 20px 0; border-bottom: 1px solid #d1d1d1; font-size: 0; }
+.all-news__wrapper p { text-align: center; font-size: 18px; color: #7B7B7B; font-family: "ProximaNova Regular", Arial, sans-serif; }
+.all-news__img { float: left; width: 140px; }
+.all-news__img img { width: 100%; }
+.all-news__text { overflow: hidden; margin-left: 20px; }
+.all-news__text .date { font-size: 18px; color: #747474; }
+.all-news__text h5 { font-size: 24px; font-weight: normal; line-height: 1.2; margin-right: 85px; }
+.all-news__text h5 > b { font-family: "ProximaNova Bold", Arial, sans-serif; }

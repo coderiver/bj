@@ -83,7 +83,7 @@
 	&__black
 		position: relative
 		background: #000
-		+transition(all 0.4s)
+		+transition(translate 0.4s)
 		-webkit-transform: translateY(0) 
 		-moz-transform: translateY(0) 
 		-ms-transform: translateY(0) 
@@ -1635,14 +1635,14 @@
 		&:hover
 			text-decoration: none
 			
+.content__main-title
+	h1
+		margin: 20px 0
+		font-size: 32px
+		font-weight: normal
+		+bold
 .economics
 	+reg
-	&__main-title
-		h1
-			margin: 20px 0
-			font-size: 32px
-			font-weight: normal
-			+bold
 	&__title
 		position: relative
 		width: 100%
@@ -1714,10 +1714,18 @@
 			font-size: 24px
 			line-height: 1.2
 		ol
-			padding-left: 30px
+			padding: 10px 0 0 40px
+			font-size: 28px
+			line-height: 0.6
+			list-style-type: decimal 
 			li
-				padding: 10px 0px
+				padding-bottom: 20px
+				&:last-child
+					padding-bottom: 0
 				a
+					display: inline-block
+					vertical-align: top
+					margin: -7px 0 0 -5px
 					font-size: 18px
 					color: #0080EC 
 					line-height: 1.2
@@ -1736,3 +1744,34 @@
 		p
 			font-size: 16px
 			color: #747474
+	&__banner
+		margin-top: 20px
+		
+.all-news
+	&__wrapper
+		padding: 20px 0
+		border-bottom: 1px solid #d1d1d1
+		font-size: 0
+		p
+			text-align: center
+			font-size: 18px
+			color: #7B7B7B
+			+reg 
+	&__img
+		float: left
+		width: 140px
+		img
+			width: 100%
+	&__text
+		overflow: hidden
+		margin-left: 20px
+		.date
+			font-size: 18px
+			color: #747474 
+		h5
+			font-size: 24px
+			font-weight: normal
+			line-height: 1.2
+			margin-right: 85px
+			>b
+				+bold
