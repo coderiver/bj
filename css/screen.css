@@ -101,15 +101,14 @@ p { font-family: "ProximaNova Regular", Arial, sans-serif; font-size: 18px; line
 @media only screen and (max-width: 1024px) { .header { min-height: 74px; } }
 .header.is-search { min-height: 124px; }
 .header.is-search .search__result { filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false); opacity: 1; visibility: visible; }
-.header__wrap { -moz-transition: all 1s; -o-transition: all 1s; -webkit-transition: all 1s; transition: all 1s; position: relative; background: #FFF; z-index: 1000; min-width: 320px; }
-.header__wrap.is-active { position: fixed; top: 0; left: 0; right: 0; }
-.header__wrap.is-active .header__black { position: absolute; top: 100%; left: 0; right: 0; }
-.header__wrap.is-hidden .header__black { -moz-transform: translateY(-100%); -ms-transform: translateY(-100%); -webkit-transform: translateY(-100%); transform: translateY(-100%); z-index: 1; }
+.header__wrap { -moz-transition: all 1s; -o-transition: all 1s; -webkit-transition: all 1s; transition: all 1s; position: relative; background: #000; z-index: 1000; min-width: 320px; }
+.header__wrap.is-active { position: fixed; top: 0; left: 0; right: 0; -webkit-transition: height 0.15s cubic-bezier(0.33, 0.66, 0.66, 1); transition: height 0.15s cubic-bezier(0.33, 0.66, 0.66, 1); height: 138px; overflow: hidden; }
+.header__wrap.is-hidden { height: 71px; }
+.header__wrap.is-hidden .header__black { -webkit-transform: translate3d(0, -100%, 0); transform: translate3d(0, -100%, 0); z-index: 1; }
 .header__white { background: #fff; z-index: 2; position: relative; }
-.header__black { position: relative; background: #000; -moz-transition: translate 0.4s; -o-transition: translate 0.4s; -webkit-transition: translate 0.4s; transition: translate 0.4s; -webkit-transform: translateY(0); -moz-transform: translateY(0); -ms-transform: translateY(0); -o-transform: translateY(0); transform: translateY(0); *zoom: 1; }
+.header__black { position: relative; background: #000; -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); *zoom: 1; }
 .header__black:after { content: " "; display: table; clear: both; }
 @media only screen and (max-width: 1024px) { .header__black { display: none; } }
-.header__black.is-hidden { -webkit-transform: translateY(-100%); -moz-transform: translateY(-100%); -ms-transform: translateY(-100%); -o-transform: translateY(-100%); transform: translateY(-100%); }
 .header__inner { max-width: 940px; margin: 0 auto; *zoom: 1; position: relative; z-index: 5; padding: 15px 15px 14px; }
 .header__inner:after { content: " "; display: table; clear: both; }
 .header__inn { max-width: 940px; margin: 0 auto; *zoom: 1; position: relative; z-index: 5; padding: 0 15px; }
@@ -560,11 +559,15 @@ p { font-family: "ProximaNova Regular", Arial, sans-serif; font-size: 18px; line
 .opinion__text p { font-size: 16px; color: #747474; }
 .opinion__banner { margin-top: 20px; }
 
-.all-news__wrapper { padding: 20px 0; border-bottom: 1px solid #d1d1d1; font-size: 0; }
-.all-news__wrapper p { text-align: center; font-size: 18px; color: #7B7B7B; font-family: "ProximaNova Regular", Arial, sans-serif; }
+.all-news__wrapper { min-height: 140px; padding: 20px 0; border-bottom: 1px solid #d1d1d1; font-size: 0; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+.all-news__wrapper:last-child { border-bottom: none; }
+.all-news__wrap { padding: 20px 0; border-bottom: 1px solid #d1d1d1; text-align: center; }
+.all-news__wrap p { font-size: 18px; color: #7B7B7B; font-family: "ProximaNova Regular", Arial, sans-serif; }
 .all-news__img { float: left; width: 140px; }
 .all-news__img img { width: 100%; }
-.all-news__text { overflow: hidden; margin-left: 20px; }
-.all-news__text .date { font-size: 18px; color: #747474; }
-.all-news__text h5 { font-size: 24px; font-weight: normal; line-height: 1.2; margin-right: 85px; }
-.all-news__text h5 > b { font-family: "ProximaNova Bold", Arial, sans-serif; }
+.all-news__text { overflow: hidden; padding-left: 20px; }
+.all-news__text .date { font-size: 18px; line-height: 0.8; color: #747474; }
+.all-news__text a { color: #000; }
+.all-news__text a:hover { color: #333333; }
+.all-news__text a h5 { padding-top: 10px; font-size: 24px; font-weight: normal; line-height: 1.2; margin-right: 85px; }
+.all-news__text a h5 > b { font-family: "ProximaNova Bold", Arial, sans-serif; }

@@ -27,22 +27,29 @@
 	&__wrap
 		+transition(all 1s)
 		position: relative
-		background: #FFF 
+		background: #000 
 		z-index: 1000  
-		min-width: 320px 
+		min-width: 320px
 		&.is-active
 			position: fixed
 			top: 0
 			left: 0
-			right: 0			
-			.header__black
-				position: absolute
-				top: 100%
-				left: 0
-				right: 0
+			right: 0
+			-webkit-transition: height .15s cubic-bezier(.33,.66,.66,1)
+			transition: height .15s cubic-bezier(.33,.66,.66,1)
+			height: 138px	
+			overflow: hidden		
+			// .header__black
+			// 	position: absolute
+			// 	top: 100%
+			// 	left: 0
+			// 	right: 0
 		&.is-hidden		
+			height: 71px
 			.header__black
-				+translateY(-100%)
+				// +translateY(-100%)
+				-webkit-transform: translate3d(0,-100%,0)
+				transform: translate3d(0,-100%,0)
 				z-index: 1 
 		// &.is-color
 		// 	background: #fff 
@@ -83,21 +90,25 @@
 	&__black
 		position: relative
 		background: #000
-		+transition(translate 0.4s)
-		-webkit-transform: translateY(0) 
-		-moz-transform: translateY(0) 
-		-ms-transform: translateY(0) 
-		-o-transform: translateY(0) 
-		transform: translateY(0)
+		// -webkit-transition: transform .15s cubic-bezier(.33,.66,.66,1)
+		// transition: transform .15s cubic-bezier(.33,.66,.66,1)
+		-webkit-transform: translate3d(0,0,0)
+		transform: translate3d(0,0,0)
+		// +transition(translate 0.4s)
+		// -webkit-transform: translateY(0) 
+		// -moz-transform: translateY(0) 
+		// -ms-transform: translateY(0) 
+		// -o-transform: translateY(0) 
+		// transform: translateY(0)
 		+clr
 		+r1
 			display: none
-		&.is-hidden
-			-webkit-transform: translateY(-100%) 
-			-moz-transform: translateY(-100%) 
-			-ms-transform: translateY(-100%) 
-			-o-transform: translateY(-100%) 
-			transform: translateY(-100%) 
+		// &.is-hidden
+		// 	-webkit-transform: translateY(-100%) 
+		// 	-moz-transform: translateY(-100%) 
+		// 	-ms-transform: translateY(-100%) 
+		// 	-o-transform: translateY(-100%) 
+		// 	transform: translateY(-100%) 
 	&__inner
 		max-width: 940px
 		margin: 0 auto
@@ -1749,11 +1760,18 @@
 		
 .all-news
 	&__wrapper
+		min-height: 140px
 		padding: 20px 0
 		border-bottom: 1px solid #d1d1d1
 		font-size: 0
+		+box
+		&:last-child
+			border-bottom: none
+	&__wrap
+		padding: 20px 0
+		border-bottom: 1px solid #d1d1d1
+		text-align: center
 		p
-			text-align: center
 			font-size: 18px
 			color: #7B7B7B
 			+reg 
@@ -1764,14 +1782,20 @@
 			width: 100%
 	&__text
 		overflow: hidden
-		margin-left: 20px
+		padding-left: 20px
 		.date
 			font-size: 18px
+			line-height: 0.8
 			color: #747474 
-		h5
-			font-size: 24px
-			font-weight: normal
-			line-height: 1.2
-			margin-right: 85px
-			>b
-				+bold
+		a
+			color: #000
+			&:hover
+				color: lighten(#000, 20%) 
+			h5
+				padding-top: 10px
+				font-size: 24px
+				font-weight: normal
+				line-height: 1.2
+				margin-right: 85px
+				>b
+					+bold
