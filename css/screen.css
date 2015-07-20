@@ -97,13 +97,12 @@ p { font-family: "ProximaNova Regular", Arial, sans-serif; font-size: 18px; line
 .top__banner { display: inline-block; max-width: 100%; }
 .top__banner img { max-width: 100%; }
 
-.header { font-size: 0; min-height: 74px; -moz-transition: min-height 0.2s; -o-transition: min-height 0.2s; -webkit-transition: min-height 0.2s; transition: min-height 0.2s; }
+.header { font-size: 0; min-height: 138px; -moz-transition: min-height 0.2s; -o-transition: min-height 0.2s; -webkit-transition: min-height 0.2s; transition: min-height 0.2s; }
+@media only screen and (max-width: 1024px) { .header { min-height: 74px; } }
 .header.is-search { min-height: 124px; }
 .header.is-search .search__result { filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false); opacity: 1; visibility: visible; }
 .header__wrap { -moz-transition: all 1s; -o-transition: all 1s; -webkit-transition: all 1s; transition: all 1s; position: relative; background: #FFF; z-index: 1000; min-width: 320px; }
 .header__wrap.is-active { position: fixed; top: 0; left: 0; right: 0; }
-.header__wrap.is-active .header__text p { display: none; }
-.header__wrap.is-active .header__text span { display: block; text-transform: uppercase; font-size: 28px; line-height: 0.8; font-family: "ProximaNova Semibold", Arial, sans-serif; }
 .header__wrap.is-active .header__black { position: absolute; top: 100%; left: 0; right: 0; }
 .header__wrap.is-hidden .header__black { -moz-transform: translateY(-100%); -ms-transform: translateY(-100%); -webkit-transform: translateY(-100%); transform: translateY(-100%); z-index: 1; }
 .header__white { background: #fff; z-index: 2; position: relative; }
@@ -123,7 +122,6 @@ p { font-family: "ProximaNova Regular", Arial, sans-serif; font-size: 18px; line
 @media only screen and (max-width: 1024px) { .header__right .btn-search { display: block; margin: 0 0 0 20px; background: url('../img/icons-s5d61879f24.png') 0 -1353px no-repeat; width: 27px; height: 27px; } }
 .header__text { float: left; width: 78.62797%; padding: 0 15px; text-align: center; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 @media only screen and (max-width: 1024px) { .header__text { display: none; } }
-.header__text span { display: none; text-transform: uppercase; font-size: 28px; line-height: 0.8; }
 .header__social { float: right; }
 .header__social li { display: inline-block; vertical-align: middle; padding: 0 0 0 20px; }
 @media only screen and (max-width: 660px) { .header__social li { padding: 0 0 0 10px; } }
@@ -220,8 +218,11 @@ p { font-family: "ProximaNova Regular", Arial, sans-serif; font-size: 18px; line
 .item__inner .title-h4 { margin-bottom: 9px; overflow: hidden; height: 78px; }
 .item__inner p { max-width: 500px; height: 84px; overflow: hidden; }
 .item__ppl { text-align: center; margin: 0 -5px; }
+.item__ppl .title-h3, .item__ppl .title-h4, .item__ppl p { color: #000; }
 .item__opinions { text-align: center; }
 .item__opinions .title-h3, .item__opinions .title-h4, .item__opinions p { color: #000; }
+.item__pic { position: relative; }
+.item__pic span { position: absolute; bottom: 0; left: 0; right: 0; padding: 0 5px 18px; background: rgba(255, 255, 255, 0.8); color: #000; font-size: 16px; font-family: "ProximaNova Regular", Arial, sans-serif; }
 .item__text { position: absolute; bottom: 33px; left: 19px; right: 19px; z-index: 5; }
 .item__text span { display: block; margin-top: -10px; color: #FFF; font-size: 18px; font-family: "ProximaNova Regular", Arial, sans-serif; }
 .item__text .date { display: block; margin: 20px 0 15px; color: #FFF; }
@@ -290,6 +291,7 @@ p { font-family: "ProximaNova Regular", Arial, sans-serif; font-size: 18px; line
 .l-inner { max-width: 970px; margin: 0 auto; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; padding: 0 15px; }
 @media only screen and (max-width: 1024px) { .l-inner { max-width: 630px; } }
 @media only screen and (max-width: 660px) { .l .row { max-width: 320px; margin: 0 auto; } }
+.l-wrapper { padding-top: 15px; border-top: 1px solid #dbdbdb; }
 .l-cover { position: relative; text-align: center; margin-bottom: 20px; }
 .l-cover__inner { background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; padding: 135px 0; display: block; color: #fff; }
 @media only screen and (max-width: 1024px) { .l-cover__inner { padding: 80px 0; } }
@@ -303,13 +305,14 @@ p { font-family: "ProximaNova Regular", Arial, sans-serif; font-size: 18px; line
 @media only screen and (max-width: 1024px) { .l-top__banner { display: none; } }
 .l-top__banner div.is-active { margin-top: 74px; }
 .l-top__block { overflow: hidden; padding: 0 20px 0 0; }
+.l-top__block .l-social { margin-right: -20px; }
 .l-top__italic { margin-bottom: 14px; }
 .l-top__italic p { font-family: "PTSerifItalic", Arial, sans-serif; font-size: 22px; line-height: 30px; color: #010101; }
 .l-top__text { padding: 34px 0 10px; }
 .l-top__text h3, .l-top__text .title-h3 { margin-bottom: 6px; }
 .l-top__text p { line-height: 24px; margin-bottom: 24px; }
 .l-social { font-size: 0; }
-.l-social li { display: inline-block; vertical-align: top; margin: 0 14px 14px 0; }
+.l-social li { display: inline-block; vertical-align: top; margin: 5px 4px 30px 0; }
 @media only screen and (max-width: 1024px) { .l-social li { margin: 0 8px 10px 0; } }
 .l-info { font-size: 0; padding: 18px 0; border-top: 1px solid #dbdbdb; border-bottom: 1px solid #dbdbdb; }
 .l-info li { display: inline-block; vertical-align: top; padding: 0 30px 0 0; }
@@ -536,9 +539,20 @@ p { font-family: "ProximaNova Regular", Arial, sans-serif; font-size: 18px; line
 .economics__wrapper p { padding-bottom: 10px; font-size: 18px; }
 .economics__wrapper p > a { color: #0080EC; }
 .economics__wrapper p > b { font-family: "ProximaNova Bold", Arial, sans-serif; }
-.economics__wrapper .l-social li { margin: 5px 4px 30px 0; }
 .economics__slider .slider-nav { margin: 20px -20px 20px 0; }
 .economics__slider .slider-nav img { margin-right: 20px; }
 .economics__slider .slider-nav img:last-child { margin-right: 0; }
 .economics__slider .slick-prev { top: 40% !important; left: 10px; }
 .economics__slider .slick-next { top: 40% !important; right: 10px; }
+
+.opinion-title { margin: 20px 0; font-size: 32px; font-weight: normal; font-family: "ProximaNova Regular", Arial, sans-serif; }
+
+.opinion__wrap { padding: 15px 0; border-bottom: 1px solid #dbdbdb; font-size: 0; font-family: "ProximaNova Regular", Arial, sans-serif; }
+.opinion__wrap h5 { padding: 10px 0; font-size: 24px; line-height: 1.2; }
+.opinion__wrap ol { padding-left: 30px; }
+.opinion__wrap ol li { padding: 10px 0px; }
+.opinion__wrap ol li a { font-size: 18px; color: #0080EC; line-height: 1.2; }
+.opinion__img { display: inline-block; vertical-align: top; width: 120px; height: 120px; }
+.opinion__img img { width: 100%; }
+.opinion__text { display: inline-block; vertical-align: top; width: 160px; margin-left: 20px; }
+.opinion__text p { font-size: 16px; color: #747474; }
