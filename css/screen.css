@@ -97,12 +97,10 @@ p { font-family: "ProximaNova Regular", Arial, sans-serif; font-size: 18px; line
 .top__banner { display: inline-block; max-width: 100%; }
 .top__banner img { max-width: 100%; }
 
-.header { font-size: 0; min-height: 138px; -moz-transition: min-height 0.2s; -o-transition: min-height 0.2s; -webkit-transition: min-height 0.2s; transition: min-height 0.2s; }
+.header { font-size: 0; min-height: 138px; background-color: black; }
 @media only screen and (max-width: 1024px) { .header { min-height: 74px; } }
-.header.is-search { min-height: 124px; }
-.header.is-search .search__result { filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false); opacity: 1; visibility: visible; }
-.header__wrap { -moz-transition: all 1s; -o-transition: all 1s; -webkit-transition: all 1s; transition: all 1s; position: relative; background: #000; z-index: 1000; min-width: 320px; }
-.header__wrap.is-active { position: fixed; top: 0; left: 0; right: 0; -webkit-transition: height 0.15s cubic-bezier(0.33, 0.66, 0.66, 1); transition: height 0.15s cubic-bezier(0.33, 0.66, 0.66, 1); height: 138px; overflow: hidden; }
+.header__wrap { position: relative; background: #000; z-index: 1000; min-width: 320px; height: 138px; }
+.header__wrap.is-active { position: fixed; top: 0; left: 0; right: 0; -webkit-transition: height 0.15s cubic-bezier(0.33, 0.66, 0.66, 1); transition: height 0.15s cubic-bezier(0.33, 0.66, 0.66, 1); overflow: hidden; }
 .header__wrap.is-hidden { height: 71px; }
 .header__wrap.is-hidden .header__black { -webkit-transform: translate3d(0, -100%, 0); transform: translate3d(0, -100%, 0); z-index: 1; }
 .header__white { background: #fff; z-index: 2; position: relative; }

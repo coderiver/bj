@@ -16,20 +16,22 @@
 .header
 	font-size: 0
 	min-height: 138px 
-	+transition(min-height 0.2s)
+	background-color: black
+	// +transition(min-height 0.2s)
 	+r1
 		min-height: 74px
-	&.is-search
-		min-height: 124px 
-		.search__result
-			+opacity(1)
-			visibility: visible
+	// &.is-search
+	// 	min-height: 124px 
+	// 	.search__result
+	// 		+opacity(1)
+	// 		visibility: visible
 	&__wrap
-		+transition(all 1s)
+		// +transition(all 1s)
 		position: relative
 		background: #000 
 		z-index: 1000  
 		min-width: 320px
+		height: 138px	
 		&.is-active
 			position: fixed
 			top: 0
@@ -37,7 +39,6 @@
 			right: 0
 			-webkit-transition: height .15s cubic-bezier(.33,.66,.66,1)
 			transition: height .15s cubic-bezier(.33,.66,.66,1)
-			height: 138px	
 			overflow: hidden		
 			// .header__black
 			// 	position: absolute
