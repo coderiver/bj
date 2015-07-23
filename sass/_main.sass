@@ -31,7 +31,9 @@
 		background: #000 
 		z-index: 1000  
 		min-width: 320px
-		height: 138px	
+		height: 138px
+		+r(768)
+			height: 74px	
 		&.is-active
 			position: fixed
 			top: 0
@@ -102,7 +104,7 @@
 		// -o-transform: translateY(0) 
 		// transform: translateY(0)
 		+clr
-		+r1
+		+r(768)
 			display: none
 		// &.is-hidden
 		// 	-webkit-transform: translateY(-100%) 
@@ -124,6 +126,9 @@
 		position: relative
 		z-index: 5 		
 		padding: 0 15px
+		> .btn-search
+			+r1
+				display: none
 	&__left
 		float: left
 	&__right
@@ -801,6 +806,9 @@
 	position: relative
 	z-index: 5 
 	+r1
+		float: none
+		text-align: center
+	+r(768)
 		display: none
 	&__inner
 		max-width: 940px
@@ -812,6 +820,8 @@
 			display: inline-block
 			vertical-align: top
 			padding: 0 40px 0 0
+			+r1
+				padding: 0 10px
 		a
 			font-size: 20px
 			padding: 21px 0 18px
@@ -820,6 +830,9 @@
 			color: #FFF
 			+reg 
 			text-transform: uppercase
+			+r1
+				font-size: 14px
+				line-height: 25px
 			&.is-active, &:hover
 				border-bottom: 4px solid #FFF
 				padding-bottom: 14px
@@ -1584,7 +1597,7 @@
 		margin-bottom: 10px
 		&.is-mob
 			display: none
-			+r1
+			+r(768)
 				display: block
 	&__title
 		display: block
@@ -1800,3 +1813,43 @@
 				margin-right: 85px
 				>b
 					+bold
+
+.error-page
+	background: url("../img/404-bg.jpg")
+	+cover
+	&__inner
+		position: relative
+		max-width: 940px
+		height: 100vh
+		margin: 0 auto
+	&__wrap
+		position: absolute
+		top: 300px
+		left: 0
+		width: 570px
+		height: 390px
+		padding: 40px
+		background: rgba(0, 0, 0, 0.6)
+		color: #FFF 
+		-webkit-border-radius: 5px
+		border-radius: 5px
+		+box
+		span
+			display: block
+			font-size: 120px
+			line-height: 0.9
+			+bold
+		p
+			display: block
+			padding-bottom: 30px
+			font-size: 24px
+			+reg
+		button
+			padding: 15px 20px
+			-webkit-border-radius: 5px
+			border-radius: 5px
+			border: 1px solid #FFF
+			background: rgba(255, 255, 255, 0.5) 
+			font-size: 24px
+			line-height: 1
+			+bold 

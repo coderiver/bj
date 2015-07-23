@@ -16,10 +16,13 @@
 	<div class="side-nav__box is-mob">
 		<span class="side-nav__title">Разделы</span>
 		<ul class="side-nav__list">
-			<li><a href="#">Люди</a></li>
-			<li><a href="#">Город</a></li>
-			<li><a href="#">Места И Вещи</a></li>
-			<li><a href="#">Планы</a></li>
+			<li><a href="#">экономика</a></li>
+			<li><a href="#">политика</a></li>
+			<li><a href="#">мир</a></li>
+			<li><a href="#">общество</a></li>
+			<li><a href="#">война</a></li>
+			<li><a href="#">мнения</a></li>
+			<li><a href="#" class="menu__hot">hot</a></li>
 		</ul>
 	</div>
 	<div class="side-nav__box">
@@ -47,100 +50,115 @@
 	</div>
 	<!-- end top -->
 	
-	<div class="menu">
-		<div class="menu__inner">
-			<a href="#" class="p-logo"><img src="img/p-logo.gif" alt=""></a>
-			<ul class="menu__list">
-				<li><a href="#">экономика</a></li>
-				<li><a href="#" class="is-active">европа</a></li>
-				<li><a href="#">форум</a></li>
-				<li><a href="#">блоги</a></li>
-				<li><a href="#">историческая правда</a></li>
-				<li><a href="#">жизнь</a></li>
-				<li><a href="#">спорт</a></li>
-				<li><a href="#">киев</a></li>
-				<li><a href="#">таблоid</a></li>
-			</ul>
-		</div>
-	</div>
 	<!-- begin header  -->
 	<header class="header">
 		<div class="header__wrap js-fixed">		
-			<div class="header__inner">
-				<div class="header__left">
-					<button class="btn-nav js-sidenav-btn"><span></span></button>
-					<a href="#" class="logo">
-						<img src="img/svg/logo.svg" alt="" class="is-white">
-						<img src="img/svg/logo-black.svg" alt="" class="is-black">
-					</a>
+			<div class="header__white">
+				<div class="header__inner">
+					<div class="header__left">
+						<button class="btn-nav js-sidenav-btn"><span></span></button>
+						<a href="#" class="logo">
+							<img src="img/svg/logo-s.svg" alt="" class="is-white">
+						</a>
+					</div>
+					<div class="header__right">
+						<div class="header__text">
+							<p>Мы задаем вопросы тогда, когда другие ставят точку</p>
+						</div>
+						<button class="btn-search js-search-btn"></button>
+						<ul class="header__social">
+							<li><a href="#" class="is-fb"></a></li>
+							<li><a href="#" class="is-tw"></a></li>
+							<li><a href="#" class="is-instagram"></a></li>
+							<li><a href="#" class="is-mail"></a></li>
+						</ul>
+					</div>
+					<!-- <nav class="nav js-nav">
+						<ul class="nav__list">
+							<li><a href="#">люди</a></li>
+							<li><a href="#">Город</a></li>
+							<li><a href="#">Места И вещи</a></li>
+							<li><a href="#">ПЛаны</a></li>
+						</ul>
+					</nav> -->
 				</div>
-				<div class="header__right">
+			</div>			
+			<div class="header__black">
+				<div class="header__inn">
+					<div class="menu">
+						<div class="menu__inner">
+							<ul class="menu__list">
+								<li><a href="#">экономика</a></li>
+								<li><a href="#">политика</a></li>
+								<li><a href="#">мир</a></li>
+								<li><a href="#">общество</a></li>
+								<li><a href="#">война</a></li>
+								<li><a href="#">мнения</a></li>
+								<li><a href="#" class="menu__hot">hot</a></li>
+							</ul>
+						</div>
+					</div>
 					<button class="btn-search js-search-btn"></button>
-					<ul class="header__social">
-						<li><a href="#" class="is-fb"></a></li>
-						<li><a href="#" class="is-tw"></a></li>
-						<li><a href="#" class="is-instagram"></a></li>
-						<li><a href="#" class="is-mail"></a></li>
-					</ul>
-				</div>
-				<nav class="nav js-nav">
-					<ul class="nav__list">
-						<li><a href="#">люди</a></li>
-						<li><a href="#">Город</a></li>
-						<li><a href="#">Места И вещи</a></li>
-						<li><a href="#">ПЛаны</a></li>
-					</ul>
-				</nav>
-			</div>
-			<div class="search js-search">
-				<div class="search__inner">
-					<i></i>
-					<button class="search__btn"></button>
-					<input type="text" class="search__input" placeholder="Поиск">
-				</div>				
-				<div class="search__result">
-					<div class="search__result-inner">
-						<div class="search__top">
-							<div class="search__left">Результатов поиска: <span>2</span></div>
-							<div class="search__filter">Сортировать: <a href="#" class="is-active">по дате</a> <a href="#">по релевантности</a></div>
-						</div>
-						<div class="search__items">
-							<div class="search__item">
-								<a href="#">
-									<h4>Страна мечты. Почему я завидую Саакашвили</h4>
-									<p>Он является советником президента Петра Порошенко и главой Консультативного международного совета.</p>
-								</a>								
-								<div class="search__bottom">
-									<a href="#" class="sticker">Город</a>
-									<time class="search__date">17 июня 2015 года</time>
-								</div>
-								<a href="#" class="search__img"><img src="img/search-img.png" alt=""></a>
-							</div>
-							<div class="search__item">
-								<a href="#">
-									<h4>Страна мечты. Почему я завидую Саакашвили</h4>
-									<p>Он является советником президента Петра Порошенко и главой Консультативного международного совета.</p>
-								</a>
-								<div class="search__bottom">
-									<a href="#" class="sticker">Город</a>
-									<time class="search__date">17 июня 2015 года</time>
-								</div>
-							</div>
-						</div>
-					</div>						
 				</div>
 			</div>
 		</div>		
+		<div class="search js-search">
+			<div class="search__inner">
+				<i></i>
+				<button class="search__btn"></button>
+				<input type="text" class="search__input" placeholder="Поиск">
+			</div>				
+			<div class="search__result">
+				<div class="search__result-inner">
+					<div class="search__top">
+						<div class="search__left">Результатов поиска: <span>2</span></div>
+						<div class="search__filter">
+							<span>Сортировать:</span>
+							<a href="#" class="is-active">по дате</a> 
+							<a href="#">по релевантности</a>
+						</div>
+					</div>
+					<div class="search__items">
+						<div class="search__item">
+							<a href="#">
+								<h4>Страна мечты. Почему я завидую Саакашвили</h4>
+								<p>Он является советником президента Петра Порошенко и главой Консультативного международного совета.</p>
+							</a>								
+							<div class="search__bottom">
+								<a href="#" class="sticker">Город</a>
+								<time class="search__date">17 июня 2015 года</time>
+							</div>
+							<a href="#" class="search__img"><img src="img/search-img.png" alt=""></a>
+						</div>
+						<div class="search__item">
+							<a href="#">
+								<h4>Страна мечты. Почему я завидую Саакашвили</h4>
+								<p>Он является советником президента Петра Порошенко и главой Консультативного международного совета.</p>
+							</a>
+							<div class="search__bottom">
+								<a href="#" class="sticker">Город</a>
+								<time class="search__date">17 июня 2015 года</time>
+							</div>
+						</div>
+					</div>
+				</div>						
+			</div>
+		</div>
 	</header>
 	<!-- end header -->
 	
 	<!-- begin main  -->
 	<main class="main">
 
-		<div class="error">
-			<span class="error__title">404</span>
-			<p>Запрашиваемая страница не найдена</p>
-			<a href="#" class="error__link">На главную</a>
+		<div class="error-page">
+			<div class="error-page__inner">
+				<div class="error-page__wrap">
+					<span>404</span>
+					<p>Упс, такой страницы не существует.</p>
+					<p>Воспользуйтесь поиском - возможно, вы просто нажали не неправильную ссылку.</p>
+					<button>На главную</button>
+				</div>
+			</div>
 		</div>
 
 	</main>
