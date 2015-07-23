@@ -1818,14 +1818,15 @@
 	background: url("../img/404-bg.jpg")
 	+cover
 	&__inner
-		position: relative
 		max-width: 940px
+		min-height: 430px
 		height: 100vh
 		margin: 0 auto
+		+vertical
+		text-align: left
 	&__wrap
-		position: absolute
-		top: 300px
-		left: 0
+		display: inline-block
+		vertical-align: middle
 		width: 570px
 		height: 390px
 		padding: 40px
@@ -1837,8 +1838,8 @@
 		+r1
 			margin-left: 20px
 		+r2
-			max-width: 320px
-			width: 70%
+			max-width: 280px
+			width: 100%
 			height: auto
 			top: 25%
 		span

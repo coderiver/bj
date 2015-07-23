@@ -576,10 +576,11 @@ p { font-family: "ProximaNova Regular", Arial, sans-serif; font-size: 18px; line
 .all-news__text a h5 > b { font-family: "ProximaNova Bold", Arial, sans-serif; }
 
 .error-page { background: url("../img/404-bg.jpg"); background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; }
-.error-page__inner { position: relative; max-width: 940px; height: 100vh; margin: 0 auto; }
-.error-page__wrap { position: absolute; top: 300px; left: 0; width: 570px; height: 390px; padding: 40px; background: rgba(0, 0, 0, 0.6); color: #FFF; -webkit-border-radius: 5px; border-radius: 5px; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+.error-page__inner { max-width: 940px; min-height: 430px; height: 100vh; margin: 0 auto; text-align: center; font-size: 0; text-align: left; }
+.error-page__inner:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
+.error-page__wrap { display: inline-block; vertical-align: middle; width: 570px; height: 390px; padding: 40px; background: rgba(0, 0, 0, 0.6); color: #FFF; -webkit-border-radius: 5px; border-radius: 5px; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 @media only screen and (max-width: 1024px) { .error-page__wrap { margin-left: 20px; } }
-@media only screen and (max-width: 660px) { .error-page__wrap { max-width: 320px; width: 70%; height: auto; top: 25%; } }
+@media only screen and (max-width: 660px) { .error-page__wrap { max-width: 280px; width: 100%; height: auto; top: 25%; } }
 .error-page__wrap span { display: block; font-size: 120px; line-height: 0.9; font-family: "ProximaNova Bold", Arial, sans-serif; }
 @media only screen and (max-width: 660px) { .error-page__wrap span { font-size: 60px; } }
 .error-page__wrap p { display: block; padding-bottom: 30px; font-size: 24px; font-family: "ProximaNova Regular", Arial, sans-serif; }
